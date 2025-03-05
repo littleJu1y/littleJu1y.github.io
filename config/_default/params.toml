@@ -6,7 +6,7 @@
 # FixIt 0.2.15 | CHANGED FixIt theme version
 version = "0.3.X" # e.g. "0.2.X", "0.2.15", "v0.2.15" etc.
 # site description
-description = "This is my new Hugo FixIt site"
+description = ""
 # site keywords
 keywords = ["Hugo", "FixIt"]
 # site default theme ["light", "dark", "auto"]
@@ -115,7 +115,7 @@ disableThemeInject = false
   # Header title config
   [header.title]
     # URL of the LOGO
-    logo = "/images/fixit.min.svg"
+    logo = "/images/pika.svg"
     # title name
     name = ""
     # you can add extra information before the name (HTML format is supported), such as icons
@@ -237,7 +237,7 @@ disableThemeInject = false
   [home.profile]
     enable = true
     # Gravatar Email for preferred avatar in home page
-    gravatarEmail = "xx@xx.com"
+    gravatarEmail = "762909561@qq.com"
     # URL of avatar shown in home page
     avatarURL = ""
     # FixIt 0.2.17 | NEW identifier of avatar menu link
@@ -245,7 +245,7 @@ disableThemeInject = false
     # title shown in home page (HTML format is supported)
     title = ""
     # subtitle shown in home page (HTML format is supported)
-    subtitle = "This is my new Hugo FixIt site"
+    subtitle = ""
     # whether to use typeit animation for subtitle
     typeit = true
     # whether to show social links
@@ -260,7 +260,7 @@ disableThemeInject = false
 
 # FixIt 0.2.16 | CHANGED Social config about the author
 [social]
-  GitHub = ""
+  GitHub = "littleJu1y"
   Linkedin = ""
   Twitter = ""
   Instagram = ""
@@ -298,7 +298,7 @@ disableThemeInject = false
   Hackernews = ""
   Kickstarter = ""
   Patreon = ""
-  Steam = ""
+  Steam = "iamjuly"
   Twitch = ""
   Strava = ""
   Skype = ""
@@ -321,13 +321,13 @@ disableThemeInject = false
   Gitea = ""
   XMPP = ""
   Matrix = ""
-  Bilibili = ""
+  Bilibili = "175868527"
   ORCID = ""
   Liberapay = ""
   Ko-Fi = ""
   BuyMeaCoffee = ""
   Linktree = ""
-  QQ = ""
+  QQ = "762909561"
   QQGroup = "" # https://qun.qq.com/join.html
   Diaspora = ""
   CSDN = ""
@@ -346,7 +346,7 @@ disableThemeInject = false
   TikTok = ""
   Credly = ""
   Phone = ""
-  Email = ""
+  Email = "762909561@qq.com"
   RSS = true
   # custom social links like the following
   # [social.twitter]
