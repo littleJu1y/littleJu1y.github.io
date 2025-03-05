@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Draft - Tag - July Blog</title>
+    <link>http://localhost:1313/tags/draft/</link>
+    <description>July Blog</description>
+    <generator>Hugo 0.145.0 &amp; FixIt v0.3.17-8b402129</generator>
+    <language>en</language>
+    <managingEditor>762909561@qq.com (July)</managingEditor>
+    <webMaster>762909561@qq.com (July)</webMaster>
+    <lastBuildDate>Wed, 05 Mar 2025 10:06:45 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/draft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/posts/10efd1f/</link>
+      <pubDate>Wed, 05 Mar 2025 10:00:47 +0800</pubDate>
+      <guid>http://localhost:1313/posts/10efd1f/</guid>
+      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <description>Test</description>
+    </item>
+  </channel>
+</rss>

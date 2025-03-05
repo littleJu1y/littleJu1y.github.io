@@ -89,7 +89,7 @@ disableThemeInject = false
   # HTML tag name of the highlight part in results
   highlightTag = "em"
   # whether to use the absolute URL based on the baseURL in search index
-  absoluteURL = false
+  absoluteURL = false 
   [search.algolia]
     index = ""
     appID = ""
