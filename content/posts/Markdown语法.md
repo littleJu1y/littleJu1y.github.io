@@ -5,19 +5,19 @@ date: 2025-03-06T10:08:24+08:00
 slug: 6874887
 draft: flase
 author:
-  name:
-  link:
+  name: July
+  link: 
   email:
-  avatar:
-description:
+  avatar: 
+description: Markdown语法
 keywords:
 license:
-comment: false
+comment: true
 weight: 0
 tags:
-  - draft
+  - markdown
 categories:
-  - draft
+  - 语法
 hiddenFromHomePage: false
 hiddenFromSearch: false
 hiddenFromRelated: false
@@ -72,15 +72,15 @@ repost:
 ```
 
 ## 注释
-***
+
 注释与html语言中的注释一样
 ```html
-<!-- 你看不到我哦~ -->
+<!-- 你看不到我 -->
 ```
 
 ## 水平线
-***
-在html中，水平线用 <hr> 标签表示。在markdown中，用下面三种方式：
+
+在html中，水平线用 `<hr>` 标签表示。在markdown中，用下面三种方式：
 
 1. ___ 三个连续的下划线
 2. --- 三个连续的破折号
@@ -93,13 +93,13 @@ ___
 ***
 
 ## 段落
-***
-直接按照纯文本的方式即可输出段落，不需要html中用<p></p>标签包裹
+
+直接按照纯文本的方式即可输出段落，不需要html中用`<p></p>`标签包裹
 
 使用一个空白行来进行换行
 
 ## 强调
-***
+
 ### 加粗
 用于强调带有较粗字体的文本片段。
 以下文本片段会被 **渲染为粗体**
@@ -137,7 +137,7 @@ _斜体_
 ```
 
 ## 列表
-***
+
 ### 无序列表
 无序列表没有标号
 可以使用如下符号来进行表示：
@@ -180,7 +180,7 @@ _斜体_
 
 
 ## 代码
-***
+
 ### 行内代码
 用 `` ` ``包装行内代码 
 **tips** 如果要包裹的行内代码内包含 ` 可以使用连续的双引号来进行包裹
@@ -204,7 +204,7 @@ text here
 ```
 
 ## 表格
-***
+
 通过在每个单元格之间添加竖线作为分割线，并在标题下添加一行破折号（也由竖线分割）来创建表格，竖线并不需要竖直对齐
 
 ```markdown
@@ -237,7 +237,7 @@ text here
 | ext    | extension to be used for dest files. |
 
 ## 链接
-***
+
 ### 基本链接
 
 ```markdown
@@ -263,5 +263,59 @@ text here
 ```
 例如：
 ```markdown
+[fixit][fixit-repo]
 
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
 ```
+呈现的效果如下：
+
+[fixit][fixit-repo]
+
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
+
+### 定位标记
+定位标记允许你跳转至同一页面上的指定锚点。例如，每个章节：
+
+```markdown
+## Table of contents
+  * [Ch1](#chapter-1)
+  * [Ch2](#chapter-2)
+```
+将跳转到这些部分：
+
+```markdown
+## Ch1 <a id="chapter-1"></a>
+content
+
+
+## Ch2 <a id="chapter-2"></a>
+```
+
+## 图片
+***
+图片的语法与链接相似，只不过要加一个感叹号
+
+```markdown
+![Minion](url)
+```
+或者
+
+```markdown
+![text](url)
+```
+
+![pika](/images/pika.svg)
+
+## emoji表情支持
+
+emoji表情有多种方式可以在hugo项目中使用。
+
+```markdown
+真开心！ :joy:
+```
+
+效果如下：
+
+真开心！ :joy:
+
+更多表情请参考emoji代码~
