@@ -8,15 +8,15 @@
     <language>en</language>
     <managingEditor>762909561@qq.com (July)</managingEditor>
     <webMaster>762909561@qq.com (July)</webMaster>
-    <lastBuildDate>Mon, 10 Mar 2025 10:49:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2025 17:11:54 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/draft/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python中的引用</title>
-      <link>http://localhost:1313/posts/2146d33/</link>
-      <pubDate>Mon, 10 Mar 2025 10:36:24 +0800</pubDate><author>762909561@qq.com (July)</author>
-      <guid>http://localhost:1313/posts/2146d33/</guid>
+      <title>Git从入门到精通</title>
+      <link>http://localhost:1313/posts/9ed4b52/</link>
+      <pubDate>Wed, 12 Mar 2025 20:10:44 +0800</pubDate><author>762909561@qq.com (July)</author>
+      <guid>http://localhost:1313/posts/9ed4b52/</guid>
       <category domain="http://localhost:1313/categories/draft/">Draft</category>
-      <description>Python中的引用</description>
+      <description>Git从入门到精通</description>
     </item>
     <item>
       <title>Test</title>
