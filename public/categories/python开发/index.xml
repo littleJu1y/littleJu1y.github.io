@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python - Tag - July Blog</title>
-    <link>http://localhost:1313/tags/python/</link>
+    <title>Python开发 - Category - July Blog</title>
+    <link>http://localhost:1313/categories/python%E5%BC%80%E5%8F%91/</link>
     <description>July Blog</description>
     <generator>Hugo 0.145.0 &amp; FixIt v0.3.17-8b402129</generator>
     <language>en</language>
     <managingEditor>762909561@qq.com (July)</managingEditor>
     <webMaster>762909561@qq.com (July)</webMaster>
     <lastBuildDate>Wed, 19 Mar 2025 13:04:15 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/python%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello_world</title>
       <link>http://localhost:1313/python%E5%BC%80%E5%8F%91/hello_world/</link>
@@ -17,14 +17,6 @@
       <guid>http://localhost:1313/python%E5%BC%80%E5%8F%91/hello_world/</guid>
       <category domain="http://localhost:1313/categories/python%E5%BC%80%E5%8F%91/">Python开发</category>
       <description>&lt;p&gt;test&#xA;tets&#39;&#xA;test&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Python中的引用</title>
-      <link>http://localhost:1313/posts/2146d33/</link>
-      <pubDate>Mon, 10 Mar 2025 10:36:24 +0800</pubDate><author>762909561@qq.com (July)</author>
-      <guid>http://localhost:1313/posts/2146d33/</guid>
-      <category domain="http://localhost:1313/categories/python/">Python</category>
-      <description>Python中的引用</description>
     </item>
   </channel>
 </rss>

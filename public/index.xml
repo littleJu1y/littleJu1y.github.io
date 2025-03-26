@@ -8,8 +8,16 @@
     <language>en</language>
     <managingEditor>762909561@qq.com (July)</managingEditor>
     <webMaster>762909561@qq.com (July)</webMaster>
-    <lastBuildDate>Tue, 18 Mar 2025 16:59:10 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Mar 2025 13:04:15 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello_world</title>
+      <link>http://localhost:1313/python%E5%BC%80%E5%8F%91/hello_world/</link>
+      <pubDate>Wed, 19 Mar 2025 12:53:48 +0800</pubDate><author>762909561@qq.com (July)</author>
+      <guid>http://localhost:1313/python%E5%BC%80%E5%8F%91/hello_world/</guid>
+      <category domain="http://localhost:1313/categories/python%E5%BC%80%E5%8F%91/">Python开发</category>
+      <description>&lt;p&gt;test&#xA;tets&#39;&#xA;test&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>Git从入门到精通</title>
       <link>http://localhost:1313/posts/9ed4b52/</link>
