@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Django5框架 - July Blog</title><meta name="author" content="July">
+<meta name="description" content="Django5框架简介 Django是用python语言写的开源web开发框架，对比Flask框架，Django原生提供了更多的功能组件，一般来说，要构建大型项目可以使用Django框架，小型项目可以使用Flask框架。
+"><meta name="keywords" content='Hugo, FixIt'>
+  <meta itemprop="name" content="Django5框架">
+  <meta itemprop="description" content="Django5框架简介 Django是用python语言写的开源web开发框架，对比Flask框架，Django原生提供了更多的功能组件，一般来说，要构建大型项目可以使用Django框架，小型项目可以使用Flask框架。">
+  <meta itemprop="datePublished" content="2025-03-19T21:03:44+08:00">
+  <meta itemprop="dateModified" content="2025-03-26T09:58:52+08:00">
+  <meta itemprop="wordCount" content="1844"><meta property="og:url" content="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/">
+  <meta property="og:site_name" content="July Blog">
+  <meta property="og:title" content="Django5框架">
+  <meta property="og:description" content="Django5框架简介 Django是用python语言写的开源web开发框架，对比Flask框架，Django原生提供了更多的功能组件，一般来说，要构建大型项目可以使用Django框架，小型项目可以使用Flask框架。">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="python开发">
+    <meta property="article:published_time" content="2025-03-19T21:03:44+08:00">
+    <meta property="article:modified_time" content="2025-03-26T09:58:52+08:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Django5框架">
+  <meta name="twitter:description" content="Django5框架简介 Django是用python语言写的开源web开发框架，对比Flask框架，Django原生提供了更多的功能组件，一般来说，要构建大型项目可以使用Django框架，小型项目可以使用Flask框架。">
+<meta name="application-name" content="Hugo FixIt Blog">
+<meta name="apple-mobile-web-app-title" content="Hugo FixIt Blog"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/" title="Django5框架 - July Blog" /><link rel="prev" type="text/html" href="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/python%E5%AF%B9%E8%B1%A1/" title="Python对象" /><link rel="next" type="text/html" href="https://littleju1y.github.io/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/python%E8%BF%AD%E4%BB%A3%E5%99%A8/" title="Python迭代器" /><link rel="alternate" type="text/markdown" href="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/index.md" title="Django5框架 - July Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Django5框架",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/littleju1y.github.io\/python%E5%BC%80%E5%8F%91\/django5%E6%A1%86%E6%9E%B6\/"
+    },"genre": "posts","wordcount":  1844 ,
+    "url": "https:\/\/littleju1y.github.io\/python%E5%BC%80%E5%8F%91\/django5%E6%A1%86%E6%9E%B6\/","datePublished": "2025-03-19T21:03:44+08:00","dateModified": "2025-03-26T09:58:52+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "July"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="July Blog"><img class="logo" src='/images/pika.svg' alt="July Blog" height="32" width="32"><span class="header-title-text">July Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="July Blog"><img class="logo" src='/images/pika.svg' alt="July Blog" height="26" width="26"><span class="header-title-text">July Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Django5框架</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img class="avatar" src='https://www.gravatar.com/avatar/31a263ac48e033521f3a9f05f56f4fd6?s=32&d=' alt="July" height="16" width="16">&nbsp;July</span></span></div><div class="post-meta-line"><span title="published on 2025-03-19 21:03:44"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-03-19">2025-03-19</time></span>&nbsp;<span title="Updated on 2025-03-26 09:58:52"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2025-03-26">2025-03-26</time></span>&nbsp;<span title="1844 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 1900 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>4 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#django5框架简介">Django5框架简介</a>
+      <ul>
+        <li><a href="#mvc模式与mvt模式">MVC模式与MVT模式</a></li>
+      </ul>
+    </li>
+    <li><a href="#django5安装">Django5安装</a></li>
+    <li><a href="#创建项目">创建项目</a>
+      <ul>
+        <li><a href="#如何启动项目">如何启动项目</a></li>
+        <li><a href="#快速使用django展示数据创建子应用">快速使用Django展示数据（创建子应用）</a></li>
+      </ul>
+    </li>
+    <li><a href="#web开发相关网络知识">web开发相关网络知识</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="django5框架简介"><span>Django5框架简介</span>
+  <a href="#django5%e6%a1%86%e6%9e%b6%e7%ae%80%e4%bb%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Django是用python语言写的开源web开发框架，对比Flask框架，Django原生提供了更多的功能组件，一般来说，要构建大型项目可以使用Django框架，小型项目可以使用Flask框架。</p>
+<p>Django框架内部架构使用的是MVT设计模式。</p>
+<h3 class="heading-element" id="mvc模式与mvt模式"><span>MVC模式与MVT模式</span>
+  <a href="#mvc%e6%a8%a1%e5%bc%8f%e4%b8%8emvt%e6%a8%a1%e5%bc%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>MVC模式的定义如下：</p>
+<ol>
+<li>M 全拼为 Model，主要封装对数据库层的访问，对数据库中的数据进行增、删、改、查操作。</li>
+<li>V 全拼为 View，用于封装结果，生成页面展示的 html 内容。</li>
+<li>C 全拼为 Controller，用于接收请求，处理业务逻辑，与 Model 和 View 交互，返回结果。</li>
+</ol>
+<p>MVT模式的定义如下：</p>
+<ol>
+<li>M 全拼为 Model，主要封装对数据库层的访问，对数据库中的数据进行增、删、改、查操作。</li>
+<li>V 全拼为 View，与 MVC 中的 C 功能相同，接收请求，进行业务处理，返回应答。</li>
+<li>T 全拼为 Template，与 MVC 中的 V 功能相同，负责封装构造要返回的 html。</li>
+</ol>
+<h2 class="heading-element" id="django5安装"><span>Django5安装</span>
+  <a href="#django5%e5%ae%89%e8%a3%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>用pip即可安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">Django</span><span class="o">==</span><span class="mf">5.0.1</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>在安装完成后，会多出一些文件。</p>
+<ol>
+<li>python目录下的scripts目录下会多出一个django-admin.exe，这是Django的项目创建工具</li>
+<li>lib下的site-packages目录下会多出一个django目录</li>
+</ol>
+<h2 class="heading-element" id="创建项目"><span>创建项目</span>
+  <a href="#%e5%88%9b%e5%bb%ba%e9%a1%b9%e7%9b%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>在cmd中输入以下指令即可</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">django-admin startproject test</span></span></code></pre></td></tr></table>
+</div>
+</div><p>项目在创建完成后将生成以下目录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">└─test_django
+</span></span><span class="line"><span class="cl">    │  manage.py
+</span></span><span class="line"><span class="cl">    │
+</span></span><span class="line"><span class="cl">    └─test_django
+</span></span><span class="line"><span class="cl">            asgi.py
+</span></span><span class="line"><span class="cl">            settings.py
+</span></span><span class="line"><span class="cl">            urls.py
+</span></span><span class="line"><span class="cl">            wsgi.py
+</span></span><span class="line"><span class="cl">            __init__.py</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>
+<p>manage.py 项目管理命令行工具，内置多种方式与项目进行交互，包括启动项目，创建app，数据管理等等。不用修改该文件(脚手架文件)</p>
+</li>
+<li>
+<p>settings.py 项目的配置文件，项目中的所有功能都需要在这里配置</p>
+</li>
+<li>
+<p>urls.py 项目的路由配置，设置网站的具体网址内容</p>
+</li>
+<li>
+<p>wsgi.py 全称python web server gateway interface，即python服务器网关接口，是python应用与web服务器之间的接口，用于django项目在服务器上的部署和上线，也不用修改，本质上来说启动server就是manage调用wsgi</p>
+</li>
+<li>
+<p>asgi.py 开启一个asgi服务，asgi是异步网关协议接口，也不用修改</p>
+</li>
+<li>
+<p>asgi与wsgi代码几乎一致，只不过一个是同步一个是异步。</p>
+</li>
+<li>
+<p>核心要修改的文件就是urls和settings.py</p>
+</li>
+</ol>
+<p>输入 <code>python manage.py help</code>可以查看相关的指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python .<span class="se">\m</span>anage.py <span class="nb">help</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Type <span class="s1">&#39;manage.py help &lt;subcommand&gt;&#39;</span> <span class="k">for</span> <span class="nb">help</span> on a specific subcommand.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Available subcommands:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>auth<span class="o">]</span>
+</span></span><span class="line"><span class="cl">    changepassword
+</span></span><span class="line"><span class="cl">    createsuperuser
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>contenttypes<span class="o">]</span>
+</span></span><span class="line"><span class="cl">    remove_stale_contenttypes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>django<span class="o">]</span>
+</span></span><span class="line"><span class="cl">    check
+</span></span><span class="line"><span class="cl">    compilemessages
+</span></span><span class="line"><span class="cl">    createcachetable
+</span></span><span class="line"><span class="cl">    dbshell
+</span></span><span class="line"><span class="cl">    diffsettings
+</span></span><span class="line"><span class="cl">    dumpdata
+</span></span><span class="line"><span class="cl">    flush
+</span></span><span class="line"><span class="cl">    inspectdb
+</span></span><span class="line"><span class="cl">    loaddata
+</span></span><span class="line"><span class="cl">    makemessages
+</span></span><span class="line"><span class="cl">    makemigrations
+</span></span><span class="line"><span class="cl">    migrate
+</span></span><span class="line"><span class="cl">    optimizemigration
+</span></span><span class="line"><span class="cl">    sendtestemail
+</span></span><span class="line"><span class="cl">    shell
+</span></span><span class="line"><span class="cl">    showmigrations
+</span></span><span class="line"><span class="cl">    sqlflush
+</span></span><span class="line"><span class="cl">    sqlmigrate
+</span></span><span class="line"><span class="cl">    sqlsequencereset
+</span></span><span class="line"><span class="cl">    squashmigrations
+</span></span><span class="line"><span class="cl">    startapp
+</span></span><span class="line"><span class="cl">    startproject
+</span></span><span class="line"><span class="cl">    <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">    testserver
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>sessions<span class="o">]</span>
+</span></span><span class="line"><span class="cl">    clearsessions
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>staticfiles<span class="o">]</span>
+</span></span><span class="line"><span class="cl">    collectstatic
+</span></span><span class="line"><span class="cl">    findstatic
+</span></span><span class="line"><span class="cl">    runserver</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="如何启动项目"><span>如何启动项目</span>
+  <a href="#%e5%a6%82%e4%bd%95%e5%90%af%e5%8a%a8%e9%a1%b9%e7%9b%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>正如在上一个指令中所展示的那样，输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python manage.py runserver</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行成功后访问本机8000端口即可得到如下界面：
+<img loading="lazy" src='/pic/django/%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C.png' alt="初次运行" height="1272" width="2407"></p>
+<p>可以使用如下参数指定端口与ip</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python manage.py runserver 0:0:0:0:8888</span></span></code></pre></td></tr></table>
+</div>
+</div><p>不过你得将这个ip添加到settings里面的allowed hosts里面。</p>
+<h3 class="heading-element" id="快速使用django展示数据创建子应用"><span>快速使用Django展示数据（创建子应用）</span>
+  <a href="#%e5%bf%ab%e9%80%9f%e4%bd%bf%e7%94%a8django%e5%b1%95%e7%a4%ba%e6%95%b0%e6%8d%ae%e5%88%9b%e5%bb%ba%e5%ad%90%e5%ba%94%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>要想将你的内容展示到网页上，需要以下三个步骤：</p>
+<ol>
+<li>创建子应用</li>
+<li>在子应用的视图文件views.py中编写视图函数</li>
+<li>把视图函数和url进行绑定并注册到django项目中</li>
+</ol>
+<p>首先输入以下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python manage.py startapp goods</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意这里创建app一般是在根目录下面创建。 在创建一个app后我们进入其中查看一下目录结构：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> goods
+</span></span><span class="line"><span class="cl">tree
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">卷序列号为 5449-63C5
+</span></span><span class="line"><span class="cl">C:.
+</span></span><span class="line"><span class="cl">│  admin.py
+</span></span><span class="line"><span class="cl">│  apps.py
+</span></span><span class="line"><span class="cl">│  models.py
+</span></span><span class="line"><span class="cl">│  tests.py
+</span></span><span class="line"><span class="cl">│  views.py
+</span></span><span class="line"><span class="cl">│  __init__.py
+</span></span><span class="line"><span class="cl">│
+</span></span><span class="line"><span class="cl">└─migrations
+</span></span><span class="line"><span class="cl">        __init__.py</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>migrations 这是一个数据迁移文件，同步模型到数据库，一般是不动的</li>
+<li>views 让我们看一下views里面有什么</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create your views here.</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>你会发现里面空空如也，实际上你要在这里编写你的views。
+我们写一个视图函数，在这里我先说明一下什么是视图函数，视图函数简称视图，他其实与普通的python函数并无区别，他只是可以接受web请求并返回web响应。视图层中有两个重要的对象：请求对象(request)与响应对象(HttpResponse)。</p>
+<p>现在让我们在views里编写一个简单的视图函数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.http.response</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create your views here.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 业务代码</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&#34;ok&#34;</span><span class="p">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>在写完视图之后，要编写路由，路由就在<code>urls.py</code>里面，编写这个文件：
+原始文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">goods</span> <span class="kn">import</span> <span class="n">views</span>
+</span></span><span class="line"><span class="cl"><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;admin/&#39;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;index/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后你便可以通过<code>http://127.0.0.1:8000/index/</code>来访问函数的返回结果了，实际上之前的代码返回了一个“ok”，你也可以返回html格式的代码。比如：
+<code>return HttpResponse(&quot;&lt;h1&gt;ok&lt;/h1&gt;&quot;, content_type=&quot;text/html&quot;)</code></p>
+<p>视图一定要绑定路由。</p>
+<p>子应用的名称将来会作为目录名存在，要符合python的命名规范，不要使用数字啥的。</p>
+<h2 class="heading-element" id="web开发相关网络知识"><span>web开发相关网络知识</span>
+  <a href="#web%e5%bc%80%e5%8f%91%e7%9b%b8%e5%85%b3%e7%bd%91%e7%bb%9c%e7%9f%a5%e8%af%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2025-03-26 09:58:52">Updated on 2025-03-26&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/" data-title="Django5框架"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/" data-title="Django5框架"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/python%E5%BC%80%E5%8F%91/python%E5%AF%B9%E8%B1%A1/" class="post-nav-item" rel="prev" title="Python对象"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Python对象</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.147.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.21-a85a6655"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">July</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.21-a85a6655"};</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

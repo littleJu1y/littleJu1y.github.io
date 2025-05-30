@@ -2,20 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>主题文档 - July Blog</title>
-    <link>http://localhost:1313/python%E5%BC%80%E5%8F%91/</link>
+    <link>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/</link>
     <description>July Blog</description>
-    <generator>Hugo 0.145.0 &amp; FixIt v0.3.17-8b402129</generator>
+    <generator>Hugo 0.147.2 &amp; FixIt v0.3.21-a85a6655</generator>
     <language>en</language>
     <managingEditor>762909561@qq.com (July)</managingEditor>
     <webMaster>762909561@qq.com (July)</webMaster>
-    <lastBuildDate>Wed, 19 Mar 2025 13:04:15 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/python%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Mar 2025 09:58:52 +0800</lastBuildDate>
+    <atom:link href="https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Django5框架</title>
+      <link>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Wed, 19 Mar 2025 21:03:44 +0800</pubDate><author>762909561@qq.com (July)</author>
+      <guid>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/</guid>
+      <description>&lt;h2 class=&#34;heading-element&#34; id=&#34;django5框架简介&#34;&gt;&lt;span&gt;Django5框架简介&lt;/span&gt;&#xA;  &lt;a href=&#34;#django5%e6%a1%86%e6%9e%b6%e7%ae%80%e4%bb%8b&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;Django是用python语言写的开源web开发框架，对比Flask框架，Django原生提供了更多的功能组件，一般来说，要构建大型项目可以使用Django框架，小型项目可以使用Flask框架。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Python对象</title>
+      <link>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/python%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Wed, 19 Mar 2025 13:19:16 +0800</pubDate><author>762909561@qq.com (July)</author>
+      <guid>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/python%E5%AF%B9%E8%B1%A1/</guid>
+      <description>&lt;p&gt;本文主要介绍python中的类，当然本目录主要是讲述python开发，在这里记录python中的类主要是由于作者本人未对python中的类掌握的足够好。&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading-element&#34; id=&#34;类&#34;&gt;&lt;span&gt;类&lt;/span&gt;&#xA;  &lt;a href=&#34;#%e7%b1%bb&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;封装，继承与多态是面向对象编程最核心的概念。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hello_world</title>
-      <link>http://localhost:1313/python%E5%BC%80%E5%8F%91/hello_world/</link>
+      <link>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/hello_world/</link>
       <pubDate>Wed, 19 Mar 2025 12:53:48 +0800</pubDate><author>762909561@qq.com (July)</author>
-      <guid>http://localhost:1313/python%E5%BC%80%E5%8F%91/hello_world/</guid>
-      <category domain="http://localhost:1313/categories/python%E5%BC%80%E5%8F%91/">Python开发</category>
+      <guid>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/hello_world/</guid>
+      <category domain="https://littleju1y.github.io/categories/python%E5%BC%80%E5%8F%91/">Python开发</category>
       <description>&lt;p&gt;test&#xA;tets&#39;&#xA;test&lt;/p&gt;</description>
     </item>
   </channel>

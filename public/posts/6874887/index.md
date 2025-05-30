@@ -1,7 +1,7 @@
 # Markdown语法
 
 
-&lt;!--more--&gt;
+<!--more-->
 
 
 为什么我们需要markdown文档呢？
@@ -29,19 +29,19 @@
 ```
 这类似于html中的
 ```html
-&lt;h3 id=&#34;custom-id&#34;&gt;标题&lt;/h3&gt;
+<h3 id="custom-id">标题</h3>
 ```
 
 ## 注释
 
 注释与html语言中的注释一样
 ```html
-&lt;!-- 你看不到我 --&gt;
+<!-- 你看不到我 -->
 ```
 
 ## 水平线
 
-在html中，水平线用 `&lt;hr&gt;` 标签表示。在markdown中，用下面三种方式：
+在html中，水平线用 `<hr>` 标签表示。在markdown中，用下面三种方式：
 
 1. ___ 三个连续的下划线
 2. --- 三个连续的破折号
@@ -55,7 +55,7 @@ ___
 
 ## 段落
 
-直接按照纯文本的方式即可输出段落，不需要html中用`&lt;p&gt;&lt;/p&gt;`标签包裹
+直接按照纯文本的方式即可输出段落，不需要html中用`<p></p>`标签包裹
 
 使用一个空白行来进行换行
 
@@ -89,12 +89,12 @@ _斜体_
 ### 引用
 用于在文档中引用其他来源的内容块
 
-在要引用的任何文本之前添加 &gt; :
+在要引用的任何文本之前添加 > :
 
 效果如下 
-&gt;这是一段引用，注意要使用引用的话，箭头应该在一行的行首同时引用也可以嵌套，二级引用是两个箭头
+>这是一段引用，注意要使用引用的话，箭头应该在一行的行首同时引用也可以嵌套，二级引用是两个箭头
 ```markdown
-&gt; 这是一段引用
+> 这是一段引用
 ```
 
 ## 列表
@@ -105,7 +105,7 @@ _斜体_
 ```markdown
 * 一项
 - 一项
-&#43; 一项
++ 一项
 ```
 例如：
 ```markdown
@@ -202,13 +202,13 @@ text here
 ### 基本链接
 
 ```markdown
-&lt;https://www.baidu.com&gt;
+<https://www.baidu.com>
 [bilibili](https://www.bilibili.com/)
 ```
 
 呈现的效果如下：
 
-&lt;https://www.baidu.com&gt;
+<https://www.baidu.com>
 
 [bilibili](https://www.bilibili.com/)
 
@@ -220,19 +220,19 @@ text here
 ```markdown
 [text][id]
 ···
-[id]: http://example.org/ &#34;title&#34;
+[id]: http://example.org/ "title"
 ```
 例如：
 ```markdown
 [fixit][fixit-repo]
 
-[fixit-repo]: https://github.com/hugo-fixit/FixIt &#34;A clean, elegant but advanced blog theme for Hugo&#34;
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
 ```
 呈现的效果如下：
 
 [fixit][fixit-repo]
 
-[fixit-repo]: https://github.com/hugo-fixit/FixIt &#34;A clean, elegant but advanced blog theme for Hugo&#34;
+[fixit-repo]: https://github.com/hugo-fixit/FixIt "A clean, elegant but advanced blog theme for Hugo"
 
 ### 定位标记
 定位标记允许你跳转至同一页面上的指定锚点。例如，每个章节：
@@ -245,11 +245,11 @@ text here
 将跳转到这些部分：
 
 ```markdown
-## Ch1 &lt;a id=&#34;chapter-1&#34;&gt;&lt;/a&gt;
+## Ch1 <a id="chapter-1"></a>
 content
 
 
-## Ch2 &lt;a id=&#34;chapter-2&#34;&gt;&lt;/a&gt;
+## Ch2 <a id="chapter-2"></a>
 ```
 
 ## 图片
@@ -284,5 +284,5 @@ emoji表情有多种方式可以在hugo项目中使用。
 ---
 
 > Author: July  
-> URL: http://localhost:1313/posts/6874887/  
+> URL: https://littleju1y.github.io/posts/6874887/  
 

@@ -1,7 +1,7 @@
 # Python中的引用
 
 
-&lt;!--more--&gt;
+<!--more-->
 
 之前有一段时间被python的引用搞得头昏脑胀，学了之后现在再看已经记不太清了，于是特来记录一番.
 
@@ -24,12 +24,12 @@
 4. library 一个库是几个包的集合。python中的库并没有具体的定义，着重强调其功能性。
 5. framework 框架，框架与库类似，往往集成了多种库的功能。
 
-## if __name__==&#39;__main__&#39;:
+## if __name__=='__main__':
 假设在同一目录下有两个文件m1.py与m2.py
 其中m1的内容如下：
 ```python
 def f1():
-  print(&#34;this is m1&#34;)
+  print("this is m1")
 ```
 m2内容如下：
 ```python
@@ -44,8 +44,8 @@ this is m1
 但是如果我们修改m1.py的内容为：
 ```python
 def f1():
-  print(&#34;this is m1&#34;)
-if __name__==&#39;__main__&#39;:
+  print("this is m1")
+if __name__=='__main__':
   f1()
 ```
 那么此时再运行m2就会输出一个m1.
@@ -53,9 +53,9 @@ if __name__==&#39;__main__&#39;:
 okay,现在来探究一下__name__.我们现在在m1.py的代码中加入一行代码：
 ```python
 def f1():
-  print(&#34;this is m1&#34;)
+  print("this is m1")
 print(__name__)
-if __name__==&#39;__main__&#39;:
+if __name__=='__main__':
   f1()
 ```
 此时再次执行m1.py，屏幕中将输出：
@@ -75,21 +75,21 @@ name这个变量编译器会自动定义，可以通过`print(dir())`显示。
 ```python
 print(dir())
 def f1():
-  print(&#34;this is m1&#34;)
+  print("this is m1")
 print(__name__)
 a=34
 print(dir())
-if __name__==&#39;__main__&#39;:
+if __name__=='__main__':
   f1()
 ```
 执行m1，将输出：
 ```shell
-[&#39;__annotations__&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
-[&#39;__annotations__&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;a&#39;, &#39;f1&#39;]
+['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__']
+['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'a', 'f1']
 this is m1
 __main__
 ```
-&gt; 看到这里，我们要知道两个事情，第一个事情是我们在import一个模块时，会自动运行这个模块中的所有代码，这与引用的形式无关，如果你不想执行那么就使用__name__.第二点是不管import几次，同一个文件只会执行一次（解释器发现第一次已经加载了，第二次便不加载了）。
+> 看到这里，我们要知道两个事情，第一个事情是我们在import一个模块时，会自动运行这个模块中的所有代码，这与引用的形式无关，如果你不想执行那么就使用__name__.第二点是不管import几次，同一个文件只会执行一次（解释器发现第一次已经加载了，第二次便不加载了）。
 
 ## sys
 编写一段python代码如下：
@@ -99,7 +99,7 @@ print(sys.path)
 ```
 代码将输出
 ```shell
-[&#39;/home/zzh/data/attack_based_steal/imp/package&#39;, &#39;/opt/anaconda3/lib/python312.zip&#39;, &#39;/opt/anaconda3/lib/python3.12&#39;, &#39;/opt/anaconda3/lib/python3.12/lib-dynload&#39;, &#39;/opt/anaconda3/lib/python3.12/site-packages&#39;]
+['/home/zzh/data/attack_based_steal/imp/package', '/opt/anaconda3/lib/python312.zip', '/opt/anaconda3/lib/python3.12', '/opt/anaconda3/lib/python3.12/lib-dynload', '/opt/anaconda3/lib/python3.12/site-packages']
 ```
 这是一个列表，当你在运行一个代码时，python会在这些路径里查找你要引用的模块。
 如果找不到要引用的那个包，那么有两种方法来解决。
@@ -141,7 +141,7 @@ f1()
 
 2. 可以手动将m2的路径添加到path中
 ```python
-sys.path.append(&#39;/home/zzh/data/attack_based_steal/imp/package/pkg&#39;)
+sys.path.append('/home/zzh/data/attack_based_steal/imp/package/pkg')
 ```
 
 ## 相对引用（容易犯错）
@@ -165,20 +165,20 @@ sys.path.append(&#39;/home/zzh/data/attack_based_steal/imp/package/pkg&#39;)
 import sys
 print(sys.path)
 def f1():
-  print(&#34;this is m1&#34;)
-if __name__==&#39;__main__&#39;:
+  print("this is m1")
+if __name__=='__main__':
   f1()
 
 #m2.py
 import sys
 import m1
-sys.path.append(&#39;/home/zzh/data/attack_based_steal/imp/package/pkg&#39;)
+sys.path.append('/home/zzh/data/attack_based_steal/imp/package/pkg')
 import pkg.run2
 
 
 #run.py
 def run1():
-    print(&#34;this run1&#34;)
+    print("this run1")
 
 run1()
 
@@ -186,7 +186,7 @@ run1()
 from  .run import run1
 
 def run2():
-    print(&#34;this run2&#34;)
+    print("this run2")
 
 run1()
 
@@ -194,7 +194,7 @@ run1()
 ```
 此时运行m2.py，代码将输出：
 ```shell
-[&#39;/home/zzh/data/attack_based_steal/imp/package&#39;, &#39;/opt/anaconda3/lib/python312.zip&#39;, &#39;/opt/anaconda3/lib/python3.12&#39;, &#39;/opt/anaconda3/lib/python3.12/lib-dynload&#39;, &#39;/opt/anaconda3/lib/python3.12/site-packages&#39;]
+['/home/zzh/data/attack_based_steal/imp/package', '/opt/anaconda3/lib/python312.zip', '/opt/anaconda3/lib/python3.12', '/opt/anaconda3/lib/python3.12/lib-dynload', '/opt/anaconda3/lib/python3.12/site-packages']
 this run1
 this run1
 ```
@@ -206,28 +206,28 @@ this run1
 ```python
 import sys
 import m1
-sys.path.append(&#39;/home/zzh/data/attack_based_steal/imp/package/pkg&#39;)
+sys.path.append('/home/zzh/data/attack_based_steal/imp/package/pkg')
 import run2
 ```
 代码将直接报错：
 ```shell
-[&#39;/home/zzh/data/attack_based_steal/imp/package&#39;, &#39;/opt/anaconda3/lib/python312.zip&#39;, &#39;/opt/anaconda3/lib/python3.12&#39;, &#39;/opt/anaconda3/lib/python3.12/lib-dynload&#39;, &#39;/opt/anaconda3/lib/python3.12/site-packages&#39;]
+['/home/zzh/data/attack_based_steal/imp/package', '/opt/anaconda3/lib/python312.zip', '/opt/anaconda3/lib/python3.12', '/opt/anaconda3/lib/python3.12/lib-dynload', '/opt/anaconda3/lib/python3.12/site-packages']
 Traceback (most recent call last):
-  File &#34;/home/zzh/data/attack_based_steal/imp/package/m2.py&#34;, line 5, in &lt;module&gt;
+  File "/home/zzh/data/attack_based_steal/imp/package/m2.py", line 5, in <module>
     import run2
-  File &#34;/home/zzh/data/attack_based_steal/imp/package/pkg/run2.py&#34;, line 1, in &lt;module&gt;
+  File "/home/zzh/data/attack_based_steal/imp/package/pkg/run2.py", line 1, in <module>
     from  .run import run1
 ImportError: attempted relative import with no known parent package
 ```
 :wink: 注意这里报错并不是因为m2没有引用到run2。这里的报错与直接执行run2的报错相同。若直接执行run2，代码将报错：
 ```shell
 Traceback (most recent call last):
-  File &#34;/home/zzh/data/attack_based_steal/imp/package/pkg/run2.py&#34;, line 1, in &lt;module&gt;
+  File "/home/zzh/data/attack_based_steal/imp/package/pkg/run2.py", line 1, in <module>
     from  .run import run1
 ImportError: attempted relative import with no known parent package
 ```
 
-&gt; 这是因为如果使用绝对路径进行引用的时候python使用sys.path来查找模块，如果找不到就报错。但是相对引用是通过模块的__name__来查找的。
+> 这是因为如果使用绝对路径进行引用的时候python使用sys.path来查找模块，如果找不到就报错。但是相对引用是通过模块的__name__来查找的。
 
 在run2中添加一行代码输出`__name__`:
 ```python
@@ -235,7 +235,7 @@ ImportError: attempted relative import with no known parent package
 print(__name__)
 from  .run import run1
 def run2():
-    print(&#34;this run2&#34;)
+    print("this run2")
 run1()
 ```
 此时分别执行m2与run2，代码将分别输出：
@@ -249,22 +249,22 @@ __main__
 修改run2.py的代码如下：
 ```python
 print(__name__)
-__name__ = &#39;pkg.abc&#39;
+__name__ = 'pkg.abc'
 import sys
-sys.path.append(&#39;/home/zzh/data/attack_based_steal/imp/package&#39;)
+sys.path.append('/home/zzh/data/attack_based_steal/imp/package')
 from  .run import run1
 
 def run2():
-    print(&#34;this run2&#34;)
+    print("this run2")
 run1()
 
 ```
 我们直接修改掉run2的`__name__`，同时将pkg所在目录添加到sys.path中，这样直接执行run2便不报错了。这是因为相对路径在查找时靠的时__name__,而此时的name告诉python上级目录是pkg，而pkg可以在path下找的，因此便不会再报错了。但是并不推荐这么写:wink:.
 
 
-&gt;实际上在真实的开发环境中一般也都是运行根目录下的主程序，而不会去直接运行包里面的文件。
+>实际上在真实的开发环境中一般也都是运行根目录下的主程序，而不会去直接运行包里面的文件。
 
-再举一个例子，假如此时m2.py引用m1使用相对引用`from .m1 import *`那么也是会报错的，同理此时的m2的__name__是__main__,因此也找不到父目录。若要修改的话要将m2的__name__修改为&#39;package.abc&#39;然后再将package的上级目录添加到sys.path中。
+再举一个例子，假如此时m2.py引用m1使用相对引用`from .m1 import *`那么也是会报错的，同理此时的m2的__name__是__main__,因此也找不到父目录。若要修改的话要将m2的__name__修改为'package.abc'然后再将package的上级目录添加到sys.path中。
 
 
 ## __init__.py
@@ -297,5 +297,5 @@ __init__.py 文件主要用来初始化，可以为空。
 ---
 
 > Author: July  
-> URL: http://localhost:1313/posts/2146d33/  
+> URL: https://littleju1y.github.io/posts/2146d33/  
 
