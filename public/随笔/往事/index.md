@@ -1,6 +1,49 @@
 # 往事
 
 
+---
+title: Conda配置修改
+subtitle:
+date: 2025-06-04T15:59:36+08:00
+slug: a8661a0
+draft: false
+author:
+  name:
+  link:
+  email:
+  avatar:
+description:
+keywords:
+license:
+comment: false
+weight: 0
+tags:
+  - draft
+categories:
+  - draft
+hiddenFromHomePage: false
+hiddenFromSearch: false
+hiddenFromRelated: false
+hiddenFromFeed: false
+summary:
+resources:
+  - name: featured-image
+    src: featured-image.jpg
+  - name: featured-image-preview
+    src: featured-image-preview.jpg
+toc: true
+math: false
+lightgallery: false
+password:
+message:
+repost:
+  enable: true
+  url:
+
+# See details front matter: https://fixit.lruihao.cn/documentation/content-management/introduction/#front-matter
+---
+
+
 过去的事情我已经忘记了很多，但是我仍然记得那个下午。
 
 那是一个阳光明媚的下午，母亲坐在院子里用梳子轻轻地梳理着我家那条狗的毛发。我坐在旁边问她，“妈妈，这样做真能让它好起来吗？”，母亲并没有给我肯定的答复，只是说到“这样也许会让它好受一点”。
@@ -16,5 +59,5 @@
 ---
 
 > Author: <no value>  
-> URL: https://littleju1y.github.io/%E9%9A%8F%E7%AC%94/%E5%BE%80%E4%BA%8B/  
+> URL: http://localhost:1313/%E9%9A%8F%E7%AC%94/%E5%BE%80%E4%BA%8B/  
 

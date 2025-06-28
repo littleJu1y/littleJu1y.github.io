@@ -135,5 +135,5 @@ iter1, iter2 = itertools.tee(original_iter, 2)
 ---
 
 > Author: <no value>  
-> URL: https://littleju1y.github.io/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/python%E8%BF%AD%E4%BB%A3%E5%99%A8/  
+> URL: http://localhost:1313/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/python%E8%BF%AD%E4%BB%A3%E5%99%A8/  
 

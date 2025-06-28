@@ -242,5 +242,5 @@ vim ~/.condarc
 ---
 
 > Author: <no value>  
-> URL: https://littleju1y.github.io/posts/a8661a0/  
+> URL: http://localhost:1313/posts/a8661a0/  
 

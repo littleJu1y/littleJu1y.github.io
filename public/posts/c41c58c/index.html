@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Docker - July Blog</title><meta name="author" content="">
+<meta name="description" content=""><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="Docker">
+  <meta itemprop="datePublished" content="2025-05-08T15:30:44+08:00">
+  <meta itemprop="dateModified" content="2025-06-28T21:04:07+08:00">
+  <meta itemprop="wordCount" content="5069">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="http://localhost:1313/posts/c41c58c/">
+  <meta property="og:site_name" content="July Blog">
+  <meta property="og:title" content="Docker">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-08T15:30:44+08:00">
+    <meta property="article:modified_time" content="2025-06-28T21:04:07+08:00">
+    <meta property="article:tag" content="Draft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Docker">
+<meta name="application-name" content="Hugo FixIt Blog">
+<meta name="apple-mobile-web-app-title" content="Hugo FixIt Blog"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/c41c58c/" title="Docker - July Blog" /><link rel="prev" type="text/html" href="http://localhost:1313/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%A0%94%E7%A9%B6/%E7%BB%BC%E8%BF%B0/" title="综述" /><link rel="next" type="text/html" href="http://localhost:1313/%E9%9A%8F%E7%AC%94/a8661a0/" title="往事" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/c41c58c/index.md" title="Docker - July Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Docker",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/c41c58c\/"
+    },"genre": "posts","keywords": "draft","wordcount":  5069 ,
+    "url": "http:\/\/localhost:1313\/posts\/c41c58c\/","datePublished": "2025-05-08T15:30:44+08:00","dateModified": "2025-06-28T21:04:07+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="July Blog"><img class="logo" src='/images/pika.svg' alt="July Blog" height="32" width="32"><span class="header-title-text">July Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="July Blog"><img class="logo" src='/images/pika.svg' alt="July Blog" height="26" width="26"><span class="header-title-text">July Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Docker</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="published on 2025-05-08 15:30:44"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-05-08">2025-05-08</time></span>&nbsp;<span title="Updated on 2025-06-28 21:04:07"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2025-06-28">2025-06-28</time></span>&nbsp;<span title="5069 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 5100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>11 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#docker的安装">docker的安装</a></li>
+    <li><a href="#测试docker以及设置镜像">测试docker以及设置镜像</a>
+      <ul>
+        <li><a href="#换源">换源</a></li>
+      </ul>
+    </li>
+    <li><a href="#docker使用">docker使用</a>
+      <ul>
+        <li><a href="#hello-world">hello world</a></li>
+        <li><a href="#交互式容器">交互式容器</a></li>
+        <li><a href="#启动容器后台模式">启动容器（后台模式）</a></li>
+      </ul>
+    </li>
+    <li><a href="#什么是docker">什么是docker？</a>
+      <ul>
+        <li><a href="#镜像与容器的关系">镜像与容器的关系</a></li>
+        <li><a href="#什么是docker的客户端与docker守护进程">什么是docker的客户端与docker守护进程?</a></li>
+      </ul>
+    </li>
+    <li><a href="#容器使用">容器使用</a>
+      <ul>
+        <li><a href="#导入与导出容器">导入与导出容器</a></li>
+        <li><a href="#删除容器">删除容器</a></li>
+        <li><a href="#运行一个web应用">运行一个web应用</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="docker的安装"><span>docker的安装</span>
+  <a href="#docker%e7%9a%84%e5%ae%89%e8%a3%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>docker分为桌面版（desktop）和非桌面版（docker引擎engine），在官网上有详细的桌面版安装，但是非桌面版安装却有点含糊不清，maybe是我的问题。</p>
+<ol>
+<li>安装前先卸载之前的docker（如果有的话）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt-get remove docker docker-engine docker.io containerd runc</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>安装必要的支持</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt install apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>添加docker官方GPG key（或者使用别的gpg key）</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>添加apt源</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#docker官方源</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&#34;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#阿里apt源</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.aliyun.com/docker-ce/linux/ubuntu </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&#34;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>更新源</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">apt update
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">apt-get update</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li>安装docker</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 安装</span>
+</span></span><span class="line"><span class="cl">sudo apt install docker-ce docker-ce-cli containerd.io
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#查看版本</span>
+</span></span><span class="line"><span class="cl">sudo docker version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#查看运行状态</span>
+</span></span><span class="line"><span class="cl">sudo systemctl status docker</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="测试docker以及设置镜像"><span>测试docker以及设置镜像</span>
+  <a href="#%e6%b5%8b%e8%af%95docker%e4%bb%a5%e5%8f%8a%e8%ae%be%e7%bd%ae%e9%95%9c%e5%83%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>okay，在安装完docker之后让我们测试一下docker能否成功使用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker run hello-world</span></span></code></pre></td></tr></table>
+</div>
+</div><p>不出意外，它报错了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker run hello-worldUnable to find image &#39;hello-world:latest&#39; locallydocker: Error response from daemon: Get &#34;https://registry-1.docker.io/v2/&#34;: context deadline exceeded (Client.Timeout exceeded while awaiting headers)Run &#39;docker run --help&#39; for more information</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这倒是不出意外，它提示我们无法在官网上拉取镜像，至于更细致的原因这里不再探究，这里拉取不到我们换源就行了。</p>
+<h3 class="heading-element" id="换源"><span>换源</span>
+  <a href="#%e6%8d%a2%e6%ba%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 首先创建一个配置文件</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">touch /etc/docker/daemon.json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">vim /etc/docker/daemon.json</span></span></code></pre></td></tr></table>
+</div>
+</div><p>加入以下内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://registry.docker-cn.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://hub-mirror.c.163.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://mirror.baidubce.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://docker.m.daocloud.io/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://huecker.io/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://dockerhub.timeweb.cloud&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://noohub.ru/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://dockerproxy.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://docker.nju.edu.cn&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://xx4bwyg2.mirror.aliyuncs.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;http://f1361db2.m.daocloud.io&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://registry.docker-cn.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;http://hub-mirror.c.163.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里的json文件格式不要错误，否则docker会重启失败，可以通过下载<code>jq</code>来进行测试。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">apt-get install -y jq
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">jq . /etc/docker/daemon.json</span></span></code></pre></td></tr></table>
+</div>
+</div><p>之后重启docker服务并再次运行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl restart docker
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run hello-world
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出</span>
+</span></span><span class="line"><span class="cl">Unable to find image <span class="s1">&#39;hello-world:latest&#39;</span> locally
+</span></span><span class="line"><span class="cl">latest: Pulling from library/hello-world
+</span></span><span class="line"><span class="cl">e6590344b1a5: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">Digest: sha256:c41088499908a59aae84b0a49c70e86f4731e588a737f1637e73c8c09d995654
+</span></span><span class="line"><span class="cl">Status: Downloaded newer image <span class="k">for</span> hello-world:latest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Hello from Docker!
+</span></span><span class="line"><span class="cl">This message shows that your installation appears to be working correctly.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To generate this message, Docker took the following steps:
+</span></span><span class="line"><span class="cl"> 1. The Docker client contacted the Docker daemon.
+</span></span><span class="line"><span class="cl"> 2. The Docker daemon pulled the <span class="s2">&#34;hello-world&#34;</span> image from the Docker Hub.
+</span></span><span class="line"><span class="cl">    <span class="o">(</span>amd64<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> 3. The Docker daemon created a new container from that image which runs the
+</span></span><span class="line"><span class="cl">    executable that produces the output you are currently reading.
+</span></span><span class="line"><span class="cl"> 4. The Docker daemon streamed that output to the Docker client, which sent it
+</span></span><span class="line"><span class="cl">    to your terminal.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To try something more ambitious, you can run an Ubuntu container with:
+</span></span><span class="line"><span class="cl"> $ docker run -it ubuntu bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Share images, automate workflows, and more with a free Docker ID:
+</span></span><span class="line"><span class="cl"> https://hub.docker.com/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">For more examples and ideas, visit:
+</span></span><span class="line"><span class="cl"> https://docs.docker.com/get-started/</span></span></code></pre></td></tr></table>
+</div>
+</div><p>哦对了，最好也修改一下dns服务，防止解析不到这些源。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vim /etc/resolv.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 添加
+</span></span><span class="line"><span class="cl">nameserver 114.114.114.114</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 class="heading-element" id="docker使用"><span>docker使用</span>
+  <a href="#docker%e4%bd%bf%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 class="heading-element" id="hello-world"><span>hello world</span>
+  <a href="#hello-world" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Docker 允许你在容器内运行应用程序， 使用 docker run 命令来在容器内运行一个应用程序。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker run ubuntu:15.10 /bin/echo <span class="s2">&#34;hello world&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 完整结果</span>
+</span></span><span class="line"><span class="cl">Unable to find image <span class="s1">&#39;ubuntu:15.10&#39;</span> locally
+</span></span><span class="line"><span class="cl">15.10: Pulling from library/ubuntu
+</span></span><span class="line"><span class="cl">7dcf5a444392: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">759aa75f3cee: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">3fa871dc8a2b: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">224c42ae46e7: Pull <span class="nb">complete</span> 
+</span></span><span class="line"><span class="cl">Digest: sha256:02521a2d079595241c6793b2044f02eecf294034f31d6e235ac4b2b54ffc41f3
+</span></span><span class="line"><span class="cl">Status: Downloaded newer image <span class="k">for</span> ubuntu:15.10
+</span></span><span class="line"><span class="cl">hello world</span></span></code></pre></td></tr></table>
+</div>
+</div><p>各个参数的意义：</p>
+<ol>
+<li>docker Docker的二进制执行文件</li>
+<li>run 与前面的docker组合来运行一个容器</li>
+<li>ubuntu:15.10 要运行的镜像，docker首先在本地主机上查找镜像是否存在，如果不存在，Docker 就会从镜像仓库 Docker Hub 下载公共镜像。</li>
+<li>/bin/ehco &ldquo;hello world&rdquo; 在启动的容器里执行命令</li>
+</ol>
+<h3 class="heading-element" id="交互式容器"><span>交互式容器</span>
+  <a href="#%e4%ba%a4%e4%ba%92%e5%bc%8f%e5%ae%b9%e5%99%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>上面的hello world没有交互的功能，我们可以通过一些参数来得到一个终端</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker run -i -t ubuntu:15.10 /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 结果如下</span>
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/# docker ps
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND       CREATED      STATUS      PORTS     NAMES
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>   <span class="m">2</span> days ago   Up <span class="m">2</span> days             compassionate_chaum
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/# docker run -i -t ubuntu:15.10 /bin/bash
+</span></span><span class="line"><span class="cl">root@d3f7ae6c4080:/# whoami
+</span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl">root@d3f7ae6c4080:/# ps
+</span></span><span class="line"><span class="cl">    PID TTY          TIME CMD
+</span></span><span class="line"><span class="cl">      <span class="m">1</span> pts/0    00:00:00 bash
+</span></span><span class="line"><span class="cl">     <span class="m">11</span> pts/0    00:00:00 ps
+</span></span><span class="line"><span class="cl">root@d3f7ae6c4080:/# docker 
+</span></span><span class="line"><span class="cl">bash: docker: <span class="nb">command</span> not found
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 注意此时用户的主机名称已经改变</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#使用exit或者ctrl+d退出终端</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>参数解析：</p>
+<ol>
+<li>-i 允许你对容器内的标准输入（STDIN）进行交互</li>
+<li>-t 在新容器内指定一个伪终端或终端</li>
+</ol>
+<h3 class="heading-element" id="启动容器后台模式"><span>启动容器（后台模式）</span>
+  <a href="#%e5%90%af%e5%8a%a8%e5%ae%b9%e5%99%a8%e5%90%8e%e5%8f%b0%e6%a8%a1%e5%bc%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker run -d ubuntu:15.10 /bin/sh -c <span class="s2">&#34;while true; do echo hello world; sleep 1; done&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 该命令的输出是一段哈希“574224410c255acae7ada2cc02f70a943e444aa0f59acb70d3c287628e583c6e”，这个长字符串叫做容器 ID，对每个容器来说都是唯一的，我们可以通过容器 ID 来查看对应的容器发生了什么。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#首先使用docker ps查看当前运行的容器</span>
+</span></span><span class="line"><span class="cl">docker ps
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">3</span> minutes ago   Up <span class="m">3</span> minutes             cranky_saha
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">2</span> days ago      Up <span class="m">2</span> days                compassionate_chaum
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#CONTAINER ID: 容器 ID。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#IMAGE: 使用的镜像。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#COMMAND: 启动容器时运行的命令。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#CREATED: 容器的创建时间。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#STATUS: 容器状态。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#PORTS: 容器的端口信息和使用的连接类型（tcp\udp）。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#NAMES: 自动分配的容器名称。</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>容器的状态有7种：</p>
+<ol>
+<li>created（已创建）</li>
+<li>restarting（重启中）</li>
+<li>running 或 Up（运行中）</li>
+<li>removing（迁移中）</li>
+<li>paused（暂停）</li>
+<li>exited（停止）</li>
+<li>dead（死亡）</li>
+</ol>
+<p>使用两种方法查看容器内的输出：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker logs 574224410c25
+</span></span><span class="line"><span class="cl">docker logs cranky_saha
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker stop 574224410c25 <span class="c1">#停止该容器，也可以使用名字指定</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>插播小知识点 /bin/bash 与 /bin/sh的区别在于bash是一个更高级功能更多的shell，如果你想要你的docker更小启动更快，建议使用sh。</p></blockquote>
+<h2 class="heading-element" id="什么是docker"><span>什么是docker？</span>
+  <a href="#%e4%bb%80%e4%b9%88%e6%98%afdocker" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Docker 容器是一个轻量级、可移植、自给自足的软件环境，用于运行应用程序。</p>
+<p>Docker 容器将应用程序及其所有依赖项（包括库、配置文件、系统工具等）封装在一个标准化的包中，使得应用能够在任何地方一致地运行。</p>
+<p>容器是操作系统级别的虚拟化，不需要运行完整的操作系统，启动和运行更为高效。</p>
+<h3 class="heading-element" id="镜像与容器的关系"><span>镜像与容器的关系</span>
+  <a href="#%e9%95%9c%e5%83%8f%e4%b8%8e%e5%ae%b9%e5%99%a8%e7%9a%84%e5%85%b3%e7%b3%bb" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><ol>
+<li>镜像（Image）：容器的静态模板，包含了应用程序运行所需的所有依赖和文件。镜像是不可变的。</li>
+<li>容器（Container）：镜像的一个运行实例，具有自己的文件系统、进程、网络等，且是动态的。容器从镜像启动，并在运行时保持可变。</li>
+</ol>
+<p>docker file &mdash;&gt; docker image &mdash;&gt; docker container</p>
+<h3 class="heading-element" id="什么是docker的客户端与docker守护进程"><span>什么是docker的客户端与docker守护进程?</span>
+  <a href="#%e4%bb%80%e4%b9%88%e6%98%afdocker%e7%9a%84%e5%ae%a2%e6%88%b7%e7%ab%af%e4%b8%8edocker%e5%ae%88%e6%8a%a4%e8%bf%9b%e7%a8%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>Docker 客户端是与 Docker 守护进程（Docker Daemon）交互的命令行工具。</p>
+<p>docker 客户端非常简单，我们可以直接输入 docker 命令来查看到 Docker 客户端的所有命令选项。</p>
+<p>解释docker的守护进程会有点复杂，这里举一个简单的例子：</p>
+<ol>
+<li>用户输入命令： docker run -d nginx</li>
+<li>客户端发送请求： 客户端将命令转换为http api请求，发送到守护程序监听的地址（默认是本地unix套接字/var/run/docker.sock）</li>
+<li>守护进程处理： 检查本地是否有nginx镜像，如果没有则拉取，创建容器并分配资源，启动容器后台运行</li>
+<li>返回结果： 守护程序将操作结果返回给客户端，客户端显示给用户</li>
+</ol>
+<blockquote>
+<p>Unix套接字:Unix 套接字（Unix Socket），也称为 Unix域套接字（Unix Domain Socket），是一种在同一台主机上的进程间进行高效通信的机制。它基于文件系统路径（而非网络协议）实现，专为本地进程间的数据传输设计，是 Unix/Linux 系统中常见的进程间通信（IPC, Inter-Process Communication）方式之一。</p></blockquote>
+<h2 class="heading-element" id="容器使用"><span>容器使用</span>
+  <a href="#%e5%ae%b9%e5%99%a8%e4%bd%bf%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>如果本地没有镜像，可以使用<code>docker pull xxx</code>来获得镜像</p>
+<p>使用<code>docker ps -a</code>查看所有容器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker ps -a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS                     PORTS     NAMES
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago   Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago             cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago               funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago   Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago             adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">12</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago               compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">12</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">12</span> days ago               distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">12</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">12</span> days ago               admiring_robinson
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># docker start 启动一个容器</span>
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker start ff1d
+</span></span><span class="line"><span class="cl">ff1d
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 再次使用docker ps -a查看容器状态，发现ff1d已经是up状态</span>
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS                     PORTS     NAMES
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago   Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago             cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago   Up <span class="m">12</span> seconds                        funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago   Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago             adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">12</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago               compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">12</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">12</span> days ago               distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">12</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">12</span> days ago               admiring_robinson
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#大部分情况下我们希望容器后台运行，加入-d参数，加入-d参数不会进入容器，如果需要进入，可以使用docker exec</span>
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker run -itd --name <span class="nb">test</span> ubuntu:15.10 /bin/bash
+</span></span><span class="line"><span class="cl">95a22e6017c51a3538c6229291752b039be3d6530c82212fac38f5284b27fcad
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                          PORTS     NAMES
+</span></span><span class="line"><span class="cl">95a22e6017c5   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">7</span> seconds ago   Up <span class="m">6</span> seconds                              <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago     Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago                  cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago     Exited <span class="o">(</span>0<span class="o">)</span> About a minute ago             funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago     Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago                  adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">12</span> days ago     Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago                    compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">12</span> days ago     Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">12</span> days ago                    distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">12</span> days ago     Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">12</span> days ago                    admiring_robinson
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#docker stop xxx 停止一个容器</span>
+</span></span><span class="line"><span class="cl">docker stop 95a22
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker stop 95a22
+</span></span><span class="line"><span class="cl">95a22
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 如何进入一个容器 docker attach 或者 docker exec 建议使用docker exec ，因为docker attach进入容器后再退出会导致容器停止，而docker exec不会</span>
+</span></span><span class="line"><span class="cl">docker ps -a
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                     PORTS     NAMES
+</span></span><span class="line"><span class="cl">95a22e6017c5   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">22</span> hours ago   Up <span class="m">2</span> seconds                         <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago    Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago             cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">22</span> hours ago              funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago             adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago               compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               admiring_robinson
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker attach 95a2
+</span></span><span class="line"><span class="cl">root@95a22e6017c5:/# whoami
+</span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl">root@95a22e6017c5:/# <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                     PORTS     NAMES
+</span></span><span class="line"><span class="cl">95a22e6017c5   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">22</span> hours ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">5</span> seconds ago             <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago    Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago             cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">22</span> hours ago              funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago             adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago               compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               admiring_robinson
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker start 95a2
+</span></span><span class="line"><span class="cl">95a2
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker <span class="nb">exec</span> -it 95a2 /bin/bash
+</span></span><span class="line"><span class="cl">root@95a22e6017c5:/# whoami
+</span></span><span class="line"><span class="cl">root
+</span></span><span class="line"><span class="cl">root@95a22e6017c5:/# <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                     PORTS     NAMES
+</span></span><span class="line"><span class="cl">95a22e6017c5   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">22</span> hours ago   Up <span class="m">21</span> seconds                        <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago    Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago             cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">22</span> hours ago              funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago             adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago               compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               admiring_robinson</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>docker run -itd xxx 与 docker start xxx的区别：Docker 中的 docker run -itd xxx 和 docker start xxx 是两个不同用途的命令，它们的核心区别在于 创建新容器和启动已有容器。docker run会创建并启动一个全新的容器（从image生成一个新的实例，而且你可以自定义名称），docker start只是用于启动</p></blockquote>
+<h3 class="heading-element" id="导入与导出容器"><span>导入与导出容器</span>
+  <a href="#%e5%af%bc%e5%85%a5%e4%b8%8e%e5%af%bc%e5%87%ba%e5%ae%b9%e5%99%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>如果要导出本地某容器，可以使用<code>docker export</code>,可以使用<code>docker import</code>从容器快照文件再次导入为镜像。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker <span class="nb">export</span> 95a2 &gt; test.tar
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat docker/ubuntu.tar <span class="p">|</span> docker import -test/ubuntu:v1</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="删除容器"><span>删除容器</span>
+  <a href="#%e5%88%a0%e9%99%a4%e5%ae%b9%e5%99%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>使用<code>docker rm -f xxx</code>删除某个容器，另外<code>docker container prune</code>可以清理掉所有终止状态的容器。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                      PORTS     NAMES
+</span></span><span class="line"><span class="cl">95a22e6017c5   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">22</span> hours ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">21</span> minutes ago             <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago    Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago              cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">22</span> hours ago               funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago    Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago              adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago                compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago                distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">13</span> days ago    Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago                admiring_robinson
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker rm -f 95a2
+</span></span><span class="line"><span class="cl">95a2
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS                     PORTS     NAMES
+</span></span><span class="line"><span class="cl">574224410c25   ubuntu:15.10   <span class="s2">&#34;/bin/sh -c &#39;while t…&#34;</span>   <span class="m">10</span> days ago   Exited <span class="o">(</span>137<span class="o">)</span> <span class="m">10</span> days ago             cranky_saha
+</span></span><span class="line"><span class="cl">ff1d328e986e   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">22</span> hours ago              funny_lovelace
+</span></span><span class="line"><span class="cl">d3f7ae6c4080   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">10</span> days ago   Exited <span class="o">(</span>127<span class="o">)</span> <span class="m">10</span> days ago             adoring_jemison
+</span></span><span class="line"><span class="cl">473b9a4bf792   ubuntu:15.10   <span class="s2">&#34;/bin/bash&#34;</span>              <span class="m">13</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">10</span> days ago               compassionate_chaum
+</span></span><span class="line"><span class="cl">fb984360fcb0   ubuntu:15.10   <span class="s2">&#34;/bin/echo &#39;hello wo…&#34;</span>   <span class="m">13</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               distracted_wiles
+</span></span><span class="line"><span class="cl">f3462ea03092   hello-world    <span class="s2">&#34;/hello&#34;</span>                 <span class="m">13</span> days ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">13</span> days ago               admiring_robinson
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker container prune
+</span></span><span class="line"><span class="cl">WARNING! This will remove all stopped containers.
+</span></span><span class="line"><span class="cl">Are you sure you want to <span class="k">continue</span>? <span class="o">[</span>y/N<span class="o">]</span> y
+</span></span><span class="line"><span class="cl">Deleted Containers:
+</span></span><span class="line"><span class="cl">574224410c255acae7ada2cc02f70a943e444aa0f59acb70d3c287628e583c6e
+</span></span><span class="line"><span class="cl">ff1d328e986eb234086d10649078b8aec82b4b895da9a503766f433daa6cb670
+</span></span><span class="line"><span class="cl">d3f7ae6c4080052a159f8fbef52074d145bf728daa2f6522f375ba676e2b957b
+</span></span><span class="line"><span class="cl">473b9a4bf792bde00d26db3c6060b638eaa0f80f66b55b1d85b2abd025920fb4
+</span></span><span class="line"><span class="cl">fb984360fcb054409125f5dbcd62281eb6b572edb1519cb10737a0efad21c451
+</span></span><span class="line"><span class="cl">f3462ea03092c2e8aa004d395692286b090c62b84b968a0f2486468a91c88707
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Total reclaimed space: 40B
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 class="heading-element" id="运行一个web应用"><span>运行一个web应用</span>
+  <a href="#%e8%bf%90%e8%a1%8c%e4%b8%80%e4%b8%aaweb%e5%ba%94%e7%94%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker pull nginx   <span class="c1">#首先我们先拉取一个web应用程序的docker</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run -d -P nginx  <span class="c1">#这里的-d是后台运行，-P是随机映射端口</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker ps  <span class="c1"># 查看目前运行的容器发现多了PORTS端口映射，容器内部的端口80被映射到了主机端口32768</span>
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker ps
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+</span></span><span class="line"><span class="cl">013079f723c7   nginx     <span class="s2">&#34;/docker-entrypoint.…&#34;</span>   <span class="m">3</span> minutes ago   Up <span class="m">3</span> minutes   0.0.0.0:32768-&gt;80/tcp, <span class="o">[</span>::<span class="o">]</span>:32768-&gt;80/tcp   objective_lehmann</span></span></code></pre></td></tr></table>
+</div>
+</div><p>接下来我们访问我们的服务，首先查看我们的ip</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# ifconfig
+</span></span><span class="line"><span class="cl">docker0: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+</span></span><span class="line"><span class="cl">        inet6 fe80::b8f0:c8ff:fe86:d90f  prefixlen <span class="m">64</span>  scopeid 0x20&lt;link&gt;
+</span></span><span class="line"><span class="cl">        ether ba:f0:c8:86:d9:0f  txqueuelen <span class="m">0</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">15</span>  bytes <span class="m">420</span> <span class="o">(</span>420.0 B<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">13</span>  bytes <span class="m">1406</span> <span class="o">(</span>1.4 KB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">eth0: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">        inet 10.6.0.11  netmask 255.255.252.0  broadcast 10.6.3.255
+</span></span><span class="line"><span class="cl">        inet6 fe80::5054:ff:fe2b:8c8c  prefixlen <span class="m">64</span>  scopeid 0x20&lt;link&gt;
+</span></span><span class="line"><span class="cl">        ether 52:54:00:2b:8c:8c  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">12766456</span>  bytes <span class="m">3826312221</span> <span class="o">(</span>3.8 GB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">10184128</span>  bytes <span class="m">1694251573</span> <span class="o">(</span>1.6 GB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">lo: <span class="nv">flags</span><span class="o">=</span>73&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span class="m">65536</span>
+</span></span><span class="line"><span class="cl">        inet 127.0.0.1  netmask 255.0.0.0
+</span></span><span class="line"><span class="cl">        inet6 ::1  prefixlen <span class="m">128</span>  scopeid 0x10&lt;host&gt;
+</span></span><span class="line"><span class="cl">        loop  txqueuelen <span class="m">1000</span>  <span class="o">(</span>Local Loopback<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">1370567</span>  bytes <span class="m">139595582</span> <span class="o">(</span>139.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">1370567</span>  bytes <span class="m">139595582</span> <span class="o">(</span>139.5 MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">vethf9885d8: <span class="nv">flags</span><span class="o">=</span>4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">        inet6 fe80::b4bf:6fff:fe07:899b  prefixlen <span class="m">64</span>  scopeid 0x20&lt;link&gt;
+</span></span><span class="line"><span class="cl">        ether 76:bf:03:bd:66:18  txqueuelen <span class="m">0</span>  <span class="o">(</span>Ethernet<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX packets <span class="m">3</span>  bytes <span class="m">126</span> <span class="o">(</span>126.0 B<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        RX errors <span class="m">0</span>  dropped <span class="m">0</span>  overruns <span class="m">0</span>  frame <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        TX packets <span class="m">14</span>  bytes <span class="m">1156</span> <span class="o">(</span>1.1 KB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        TX errors <span class="m">0</span>  dropped <span class="m">0</span> overruns <span class="m">0</span>  carrier <span class="m">0</span>  collisions <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 你会发现一个神奇的现象，这里面并没有我们的公网ip，这是为什么呢？其实这里是存在一个误解，ifconfig查看的是服务器内部的网路接口信息，而不是公网ip地址。公网ip不会直接显示在ifconfig的输出中，因为公网 IP 通常是通过 NAT（网络地址转换）映射到内网 IP 的,若想查看公网ip，你需要输入`curl ifconfig.me`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# curl ifconfig.me
+</span></span><span class="line"><span class="cl">118.25.230.175root@VM-0-11-ubuntu:/home/july# 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 这种网络架构是正常的，特别是在云服务器环境中：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 服务器内部使用内网 IP（10.6.0.11）进行内部通信</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 外部访问通过公网 IP（118.25.230.175）进行</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 云服务提供商的网络设备负责在这两个地址之间进行转换</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时我们尝试访问<code>http://118.25.230.175:32768/</code>，无法访问，这是因为在云服务器环境中有安全组的配置，所以无法访问是正常的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#docker logs xxx 查看容器内部的输出</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker logs <span class="m">0130</span>
+</span></span><span class="line"><span class="cl">/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+</span></span><span class="line"><span class="cl">/docker-entrypoint.sh: Looking <span class="k">for</span> shell scripts in /docker-entrypoint.d/
+</span></span><span class="line"><span class="cl">/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+</span></span><span class="line"><span class="cl">10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+</span></span><span class="line"><span class="cl">10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+</span></span><span class="line"><span class="cl">/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+</span></span><span class="line"><span class="cl">/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+</span></span><span class="line"><span class="cl">/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+</span></span><span class="line"><span class="cl">/docker-entrypoint.sh: Configuration complete<span class="p">;</span> ready <span class="k">for</span> start up
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: using the <span class="s2">&#34;epoll&#34;</span> event method
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: nginx/1.27.5
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: built by gcc 12.2.0 <span class="o">(</span>Debian 12.2.0-14<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: OS: Linux 6.8.0-51-generic
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: getrlimit<span class="o">(</span>RLIMIT_NOFILE<span class="o">)</span>: 1048576:1048576
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: start worker processes
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: start worker process <span class="m">29</span>
+</span></span><span class="line"><span class="cl">2025/06/05 07:48:57 <span class="o">[</span>notice<span class="o">]</span> 1#1: start worker process <span class="m">30</span>
+</span></span><span class="line"><span class="cl">172.17.0.1 - - <span class="o">[</span>05/Jun/2025:08:09:30 +0000<span class="o">]</span> <span class="s2">&#34;GET / HTTP/1.1&#34;</span> <span class="m">200</span> <span class="m">615</span> <span class="s2">&#34;-&#34;</span> <span class="s2">&#34;curl/8.5.0&#34;</span> <span class="s2">&#34;-&#34;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用<code>docker top xxx</code>查看容器内部运行的进程</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">root@VM-0-11-ubuntu:/home/july# docker top <span class="m">0130</span>
+</span></span><span class="line"><span class="cl">UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+</span></span><span class="line"><span class="cl">root                <span class="m">2718760</span>             <span class="m">2718735</span>             <span class="m">0</span>                   15:48               ?                   00:00:00            nginx: master process nginx -g daemon off<span class="p">;</span>
+</span></span><span class="line"><span class="cl">message+            <span class="m">2718825</span>             <span class="m">2718760</span>             <span class="m">0</span>                   15:48               ?                   00:00:00            nginx: worker process
+</span></span><span class="line"><span class="cl">message+            <span class="m">2718826</span>             <span class="m">2718760</span>             <span class="m">0</span>                   15:48               ?                   00:00:00            nginx: worker process</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2025-06-28 21:04:07">Updated on 2025-06-28&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/c41c58c/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span><span><a href="vscode://file//home/july/hugo/my-blog/content/posts/docker.md" title="Open in editor"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">Open in editor</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="http://localhost:1313/posts/c41c58c/" data-title="Docker" data-hashtags="draft"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/c41c58c/" data-hashtag="draft"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/c41c58c/" data-title="Docker"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/draft/" class="post-tag" title="Tags - Draft">Draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/python%E5%BC%80%E5%8F%91/python%E5%AF%B9%E8%B1%A1/" class="post-nav-item" rel="prev" title="Python对象"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Python对象</a><a href="/%E9%9A%8F%E7%AC%94/a8661a0/" class="post-nav-item" rel="next" title="往事">往事<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.147.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.21-a85a6655"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">July</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.21-a85a6655"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

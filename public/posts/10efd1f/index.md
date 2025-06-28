@@ -10,5 +10,5 @@
 ---
 
 > Author: <no value>  
-> URL: https://littleju1y.github.io/posts/10efd1f/  
+> URL: http://localhost:1313/posts/10efd1f/  
 

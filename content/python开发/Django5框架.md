@@ -1,10 +1,14 @@
 ---
 title: "Django5框架"
 subtitle: ""
-date: 2025-03-19T21:03:44+08:00
+date: 2025-03-19T12:53:48+08:00
 description: ""
 keywords: ""
 comment: false
+tags:
+- python
+categories:
+- python开发
 ---
 
 ## Django5框架简介

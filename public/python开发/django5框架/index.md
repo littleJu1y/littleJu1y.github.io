@@ -212,5 +212,5 @@ urlpatterns = [
 ---
 
 > Author: July  
-> URL: https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/  
+> URL: http://localhost:1313/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/  
 

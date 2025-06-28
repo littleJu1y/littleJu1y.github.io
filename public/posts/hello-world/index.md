@@ -21,5 +21,5 @@ Head over to the [issues](https://github.com/hugo-fixit/FixIt/issues) or [discus
 ---
 
 > Author: July  
-> URL: https://littleju1y.github.io/posts/hello-world/  
+> URL: http://localhost:1313/posts/hello-world/  
 
