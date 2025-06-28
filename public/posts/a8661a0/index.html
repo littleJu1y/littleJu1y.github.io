@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Conda配置修改 - July Blog</title><meta name="author" content="">
+<meta name="description" content=""><meta name="keywords" content='draft'>
+  <meta itemprop="name" content="Conda配置修改">
+  <meta itemprop="datePublished" content="2025-06-04T15:59:36+08:00">
+  <meta itemprop="dateModified" content="2025-06-04T16:04:05+08:00">
+  <meta itemprop="wordCount" content="874">
+  <meta itemprop="keywords" content="Draft"><meta property="og:url" content="https://littleju1y.github.io/posts/a8661a0/">
+  <meta property="og:site_name" content="July Blog">
+  <meta property="og:title" content="Conda配置修改">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-04T15:59:36+08:00">
+    <meta property="article:modified_time" content="2025-06-04T16:04:05+08:00">
+    <meta property="article:tag" content="Draft">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Conda配置修改">
+<meta name="application-name" content="Hugo FixIt Blog">
+<meta name="apple-mobile-web-app-title" content="Hugo FixIt Blog"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://littleju1y.github.io/posts/a8661a0/" title="Conda配置修改 - July Blog" /><link rel="prev" type="text/html" href="https://littleju1y.github.io/%E9%9A%8F%E7%AC%94/%E5%BE%80%E4%BA%8B/" title="往事" /><link rel="next" type="text/html" href="https://littleju1y.github.io/%E9%9A%8F%E7%AC%94/%E8%A6%81%E4%B8%8B%E9%9B%A8%E4%BA%86/" title="要下雨了" /><link rel="alternate" type="text/markdown" href="https://littleju1y.github.io/posts/a8661a0/index.md" title="Conda配置修改 - July Blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Conda配置修改",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/littleju1y.github.io\/posts\/a8661a0\/"
+    },"genre": "posts","keywords": "draft","wordcount":  874 ,
+    "url": "https:\/\/littleju1y.github.io\/posts\/a8661a0\/","datePublished": "2025-06-04T15:59:36+08:00","dateModified": "2025-06-04T16:04:05+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="July Blog"><img class="logo" src='/images/pika.svg' alt="July Blog" height="32" width="32"><span class="header-title-text">July Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="July Blog"><img class="logo" src='/images/pika.svg' alt="July Blog" height="26" width="26"><span class="header-title-text">July Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>Conda配置修改</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="post-meta-line"><span title="published on 2025-06-04 15:59:36"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-06-04">2025-06-04</time></span>&nbsp;<span title="Updated on 2025-06-04 16:04:05"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2025-06-04">2025-06-04</time></span>&nbsp;<span title="874 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 900 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#通过conda-info-或者-conda-config-show-查看自己的conda配置信息">通过conda info 或者 conda config &ndash;show 查看自己的conda配置信息</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="通过conda-info-或者-conda-config-show-查看自己的conda配置信息"><span>通过conda info 或者 conda config &ndash;show 查看自己的conda配置信息</span>
+  <a href="#%e9%80%9a%e8%bf%87conda-info-%e6%88%96%e8%80%85-conda-config-show-%e6%9f%a5%e7%9c%8b%e8%87%aa%e5%b7%b1%e7%9a%84conda%e9%85%8d%e7%bd%ae%e4%bf%a1%e6%81%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> zzh@GPU-Server-L20:~$ conda info
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     active environment : base
+</span></span><span class="line"><span class="cl">    active env location : /opt/anaconda3
+</span></span><span class="line"><span class="cl">            shell level : <span class="m">1</span>
+</span></span><span class="line"><span class="cl">       user config file : /home/zzh/.condarc
+</span></span><span class="line"><span class="cl"> populated config files : /opt/anaconda3/.condarc
+</span></span><span class="line"><span class="cl">                          /home/zzh/.condarc
+</span></span><span class="line"><span class="cl">          conda version : 24.11.3
+</span></span><span class="line"><span class="cl">    conda-build version : 24.9.0
+</span></span><span class="line"><span class="cl">         python version : 3.12.2.final.0
+</span></span><span class="line"><span class="cl">                 solver : libmamba <span class="o">(</span>default<span class="o">)</span>
+</span></span><span class="line"><span class="cl">       virtual packages : <span class="nv">__archspec</span><span class="o">=</span><span class="nv">1</span><span class="o">=</span>zen4
+</span></span><span class="line"><span class="cl">                          <span class="nv">__conda</span><span class="o">=</span>24.11.3<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nv">__cuda</span><span class="o">=</span>12.8<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nv">__glibc</span><span class="o">=</span>2.35<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nv">__linux</span><span class="o">=</span>5.15.0<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nv">__unix</span><span class="o">=</span><span class="nv">0</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">       base environment : /opt/anaconda3  <span class="o">(</span><span class="nb">read</span> only<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      conda av data dir : /opt/anaconda3/etc/conda
+</span></span><span class="line"><span class="cl">  conda av metadata url : None
+</span></span><span class="line"><span class="cl">           channel URLs : https://mirror.lzu.edu.cn/anaconda/cloud/conda-forge/linux-64
+</span></span><span class="line"><span class="cl">                          https://mirror.lzu.edu.cn/anaconda/cloud/conda-forge/noarch
+</span></span><span class="line"><span class="cl">                          https://mirror.lzu.edu.cn/anaconda/pkgs/main/linux-64
+</span></span><span class="line"><span class="cl">                          https://mirror.lzu.edu.cn/anaconda/pkgs/main/noarch
+</span></span><span class="line"><span class="cl">                          https://mirror.lzu.edu.cn/anaconda/pkgs/r/linux-64
+</span></span><span class="line"><span class="cl">                          https://mirror.lzu.edu.cn/anaconda/pkgs/r/noarch
+</span></span><span class="line"><span class="cl">                          https://mirror.lzu.edu.cn/anaconda/pkgs/msys2/linux-64
+</span></span><span class="line"><span class="cl">                          https://mirror.lzu.edu.cn/anaconda/pkgs/msys2/noarch
+</span></span><span class="line"><span class="cl">                          https://repo.anaconda.com/pkgs/main/linux-64
+</span></span><span class="line"><span class="cl">                          https://repo.anaconda.com/pkgs/main/noarch
+</span></span><span class="line"><span class="cl">                          https://repo.anaconda.com/pkgs/r/linux-64
+</span></span><span class="line"><span class="cl">                          https://repo.anaconda.com/pkgs/r/noarch
+</span></span><span class="line"><span class="cl">          package cache : /srv/conda_pkgs
+</span></span><span class="line"><span class="cl">       envs directories : /opt/anaconda3/envs
+</span></span><span class="line"><span class="cl">                          /home/zzh/.conda/envs
+</span></span><span class="line"><span class="cl">               platform : linux-64
+</span></span><span class="line"><span class="cl">             user-agent : conda/24.11.3 requests/2.32.3 CPython/3.12.2 Linux/5.15.0-140-generic ubuntu/22.04.5 glibc/2.35 solver/libmamba conda-libmamba-solver/24.9.0 libmambapy/1.5.8 aau/0.4.4 c/6RGbBPBNDWQHXq6gOb3zcQ s/LjKb7u_F5oo0rEu3feD6-A e/Pbj6KNwzj9T_jvUfEWtz1g
+</span></span><span class="line"><span class="cl">                UID:GID : 1003:1003
+</span></span><span class="line"><span class="cl">             netrc file : None
+</span></span><span class="line"><span class="cl">           offline mode : False
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">(</span>base<span class="o">)</span> zzh@GPU-Server-L20:~$ conda config --show
+</span></span><span class="line"><span class="cl">add_anaconda_token: True
+</span></span><span class="line"><span class="cl">add_pip_as_python_dependency: True
+</span></span><span class="line"><span class="cl">aggressive_update_packages:
+</span></span><span class="line"><span class="cl">  - ca-certificates
+</span></span><span class="line"><span class="cl">  - certifi
+</span></span><span class="line"><span class="cl">  - openssl
+</span></span><span class="line"><span class="cl">allow_conda_downgrades: False
+</span></span><span class="line"><span class="cl">allow_cycles: True
+</span></span><span class="line"><span class="cl">allow_non_channel_urls: False
+</span></span><span class="line"><span class="cl">allow_softlinks: False
+</span></span><span class="line"><span class="cl">allowlist_channels: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">always_copy: False
+</span></span><span class="line"><span class="cl">always_softlink: False
+</span></span><span class="line"><span class="cl">always_yes: None
+</span></span><span class="line"><span class="cl">anaconda_anon_usage: True
+</span></span><span class="line"><span class="cl">anaconda_upload: None
+</span></span><span class="line"><span class="cl">auto_activate_base: True
+</span></span><span class="line"><span class="cl">auto_stack: <span class="m">0</span>
+</span></span><span class="line"><span class="cl">auto_update_conda: True
+</span></span><span class="line"><span class="cl">bld_path: 
+</span></span><span class="line"><span class="cl">changeps1: True
+</span></span><span class="line"><span class="cl">channel_alias: https://conda.anaconda.org
+</span></span><span class="line"><span class="cl">channel_priority: strict
+</span></span><span class="line"><span class="cl">channel_settings: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">channels:
+</span></span><span class="line"><span class="cl">  - conda-forge
+</span></span><span class="line"><span class="cl">  - defaults
+</span></span><span class="line"><span class="cl">  - https://repo.anaconda.com/pkgs/main
+</span></span><span class="line"><span class="cl">  - https://repo.anaconda.com/pkgs/r
+</span></span><span class="line"><span class="cl">client_ssl_cert: None
+</span></span><span class="line"><span class="cl">client_ssl_cert_key: None
+</span></span><span class="line"><span class="cl">clobber: False
+</span></span><span class="line"><span class="cl">conda_build: <span class="o">{}</span>
+</span></span><span class="line"><span class="cl">console: classic
+</span></span><span class="line"><span class="cl">create_default_packages: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">croot: /home/zzh/conda-bld
+</span></span><span class="line"><span class="cl">custom_channels:
+</span></span><span class="line"><span class="cl">  anaconda/pkgs/main: https://mirror.lzu.edu.cn
+</span></span><span class="line"><span class="cl">  anaconda/pkgs/r: https://mirror.lzu.edu.cn
+</span></span><span class="line"><span class="cl">  anaconda/pkgs/msys2: https://mirror.lzu.edu.cn
+</span></span><span class="line"><span class="cl">  conda-forge: https://mirror.lzu.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">  pytorch: https://mirror.lzu.edu.cn/anaconda/cloud
+</span></span><span class="line"><span class="cl">custom_multichannels:
+</span></span><span class="line"><span class="cl">  defaults: 
+</span></span><span class="line"><span class="cl">    - https://mirror.lzu.edu.cn/anaconda/pkgs/main
+</span></span><span class="line"><span class="cl">    - https://mirror.lzu.edu.cn/anaconda/pkgs/r
+</span></span><span class="line"><span class="cl">    - https://mirror.lzu.edu.cn/anaconda/pkgs/msys2
+</span></span><span class="line"><span class="cl">  local: 
+</span></span><span class="line"><span class="cl">debug: False
+</span></span><span class="line"><span class="cl">default_channels:
+</span></span><span class="line"><span class="cl">  - https://mirror.lzu.edu.cn/anaconda/pkgs/main
+</span></span><span class="line"><span class="cl">  - https://mirror.lzu.edu.cn/anaconda/pkgs/r
+</span></span><span class="line"><span class="cl">  - https://mirror.lzu.edu.cn/anaconda/pkgs/msys2
+</span></span><span class="line"><span class="cl">default_python: 3.12
+</span></span><span class="line"><span class="cl">default_threads: None
+</span></span><span class="line"><span class="cl">denylist_channels: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">deps_modifier: not_set
+</span></span><span class="line"><span class="cl">dev: False
+</span></span><span class="line"><span class="cl">disallowed_packages: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">download_only: False
+</span></span><span class="line"><span class="cl">dry_run: False
+</span></span><span class="line"><span class="cl">enable_private_envs: False
+</span></span><span class="line"><span class="cl">env_prompt: <span class="o">({</span>default_env<span class="o">})</span> 
+</span></span><span class="line"><span class="cl">envs_dirs:
+</span></span><span class="line"><span class="cl">  - /opt/anaconda3/envs
+</span></span><span class="line"><span class="cl">  - /home/zzh/.conda/envs
+</span></span><span class="line"><span class="cl">envvars_force_uppercase: True
+</span></span><span class="line"><span class="cl">error_upload_url: https://conda.io/conda-post/unexpected-error
+</span></span><span class="line"><span class="cl">execute_threads: <span class="m">1</span>
+</span></span><span class="line"><span class="cl">experimental: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">extra_safety_checks: False
+</span></span><span class="line"><span class="cl">fetch_threads: <span class="m">5</span>
+</span></span><span class="line"><span class="cl">force: False
+</span></span><span class="line"><span class="cl">force_32bit: False
+</span></span><span class="line"><span class="cl">force_reinstall: False
+</span></span><span class="line"><span class="cl">force_remove: False
+</span></span><span class="line"><span class="cl">ignore_pinned: False
+</span></span><span class="line"><span class="cl">json: False
+</span></span><span class="line"><span class="cl">local_repodata_ttl: <span class="m">1</span>
+</span></span><span class="line"><span class="cl">migrated_channel_aliases: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">migrated_custom_channels: <span class="o">{}</span>
+</span></span><span class="line"><span class="cl">no_lock: False
+</span></span><span class="line"><span class="cl">no_plugins: False
+</span></span><span class="line"><span class="cl">non_admin_enabled: True
+</span></span><span class="line"><span class="cl">notify_outdated_conda: True
+</span></span><span class="line"><span class="cl">number_channel_notices: <span class="m">5</span>
+</span></span><span class="line"><span class="cl">offline: False
+</span></span><span class="line"><span class="cl">override_channels_enabled: True
+</span></span><span class="line"><span class="cl">path_conflict: clobber
+</span></span><span class="line"><span class="cl">pinned_packages: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">pip_interop_enabled: False
+</span></span><span class="line"><span class="cl">pkgs_dirs:
+</span></span><span class="line"><span class="cl">  - /srv/conda_pkgs
+</span></span><span class="line"><span class="cl">proxy_servers: <span class="o">{}</span>
+</span></span><span class="line"><span class="cl">quiet: False
+</span></span><span class="line"><span class="cl">register_envs: True
+</span></span><span class="line"><span class="cl">remote_backoff_factor: <span class="m">1</span>
+</span></span><span class="line"><span class="cl">remote_connect_timeout_secs: 9.15
+</span></span><span class="line"><span class="cl">remote_max_retries: <span class="m">3</span>
+</span></span><span class="line"><span class="cl">remote_read_timeout_secs: 60.0
+</span></span><span class="line"><span class="cl">repodata_fns:
+</span></span><span class="line"><span class="cl">  - current_repodata.json
+</span></span><span class="line"><span class="cl">  - repodata.json
+</span></span><span class="line"><span class="cl">repodata_threads: None
+</span></span><span class="line"><span class="cl">repodata_use_zst: True
+</span></span><span class="line"><span class="cl">report_errors: None
+</span></span><span class="line"><span class="cl">restore_free_channel: False
+</span></span><span class="line"><span class="cl">rollback_enabled: True
+</span></span><span class="line"><span class="cl">root_prefix: /opt/anaconda3
+</span></span><span class="line"><span class="cl">safety_checks: warn
+</span></span><span class="line"><span class="cl">sat_solver: pycosat
+</span></span><span class="line"><span class="cl">separate_format_cache: False
+</span></span><span class="line"><span class="cl">shortcuts: True
+</span></span><span class="line"><span class="cl">shortcuts_only: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">show_channel_urls: True
+</span></span><span class="line"><span class="cl">signing_metadata_url_base: None
+</span></span><span class="line"><span class="cl">solver: libmamba
+</span></span><span class="line"><span class="cl">solver_ignore_timestamps: False
+</span></span><span class="line"><span class="cl">ssl_verify: True
+</span></span><span class="line"><span class="cl">subdir: linux-64
+</span></span><span class="line"><span class="cl">subdirs:
+</span></span><span class="line"><span class="cl">  - linux-64
+</span></span><span class="line"><span class="cl">  - noarch
+</span></span><span class="line"><span class="cl">target_prefix_override: 
+</span></span><span class="line"><span class="cl">trace: False
+</span></span><span class="line"><span class="cl">track_features: <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">unsatisfiable_hints: True
+</span></span><span class="line"><span class="cl">unsatisfiable_hints_check_depth: <span class="m">2</span>
+</span></span><span class="line"><span class="cl">update_modifier: update_specs
+</span></span><span class="line"><span class="cl">use_index_cache: False
+</span></span><span class="line"><span class="cl">use_local: False
+</span></span><span class="line"><span class="cl">use_only_tar_bz2: None
+</span></span><span class="line"><span class="cl">verbosity: <span class="m">0</span>
+</span></span><span class="line"><span class="cl">verify_threads: <span class="m">1</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>在其中主要修改以下<code>package cache : /srv/conda_pkgs</code>，这是conda的包缓存目录，如果你没有这个目录的权限，在下载包时是会报错的.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">(</span><span class="nx">base</span><span class="p">)</span> <span class="nx">zzh</span><span class="err">@</span><span class="nx">GPU</span><span class="o">-</span><span class="nx">Server</span><span class="o">-</span><span class="nx">L20</span><span class="p">:~</span><span class="err">$</span> <span class="nx">conda</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">add</span> <span class="nx">pkgs_dirs</span> <span class="err">$</span><span class="nx">HOME</span><span class="o">/</span><span class="p">.</span><span class="nx">conda</span><span class="o">/</span><span class="nf">pkgs</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nx">base</span><span class="p">)</span> <span class="nx">zzh</span><span class="err">@</span><span class="nx">GPU</span><span class="o">-</span><span class="nx">Server</span><span class="o">-</span><span class="nx">L20</span><span class="p">:~</span><span class="err">$</span> <span class="nx">conda</span> <span class="nx">info</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     <span class="nx">active</span> <span class="nx">environment</span> <span class="p">:</span> <span class="nx">base</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">active</span> <span class="nx">env</span> <span class="nx">location</span> <span class="p">:</span> <span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">anaconda3</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">shell</span> <span class="nx">level</span> <span class="p">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">user</span> <span class="nx">config</span> <span class="nx">file</span> <span class="p">:</span> <span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">zzh</span><span class="o">/</span><span class="p">.</span><span class="nx">condarc</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">populated</span> <span class="nx">config</span> <span class="nx">files</span> <span class="p">:</span> <span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">anaconda3</span><span class="o">/</span><span class="p">.</span><span class="nx">condarc</span>
+</span></span><span class="line"><span class="cl">                          <span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">zzh</span><span class="o">/</span><span class="p">.</span><span class="nx">condarc</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">conda</span> <span class="nx">version</span> <span class="p">:</span> <span class="mf">24.11.3</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">conda</span><span class="o">-</span><span class="nx">build</span> <span class="nx">version</span> <span class="p">:</span> <span class="mf">24.9.0</span>
+</span></span><span class="line"><span class="cl">         <span class="nx">python</span> <span class="nx">version</span> <span class="p">:</span> <span class="mf">3.12.2</span><span class="p">.</span><span class="nx">final</span><span class="mf">.0</span>
+</span></span><span class="line"><span class="cl">                 <span class="nx">solver</span> <span class="p">:</span> <span class="nf">libmamba</span> <span class="p">(</span><span class="k">default</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">virtual</span> <span class="nx">packages</span> <span class="p">:</span> <span class="nx">__archspec</span><span class="p">=</span><span class="mi">1</span><span class="p">=</span><span class="nx">zen4</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">__conda</span><span class="p">=</span><span class="mf">24.11.3</span><span class="p">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">__cuda</span><span class="p">=</span><span class="mf">12.8</span><span class="p">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">__glibc</span><span class="p">=</span><span class="mf">2.35</span><span class="p">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">__linux</span><span class="p">=</span><span class="mf">5.15.0</span><span class="p">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">__unix</span><span class="p">=</span><span class="mi">0</span><span class="p">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">base</span> <span class="nx">environment</span> <span class="p">:</span> <span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nf">anaconda3</span>  <span class="p">(</span><span class="nx">read</span> <span class="nx">only</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">conda</span> <span class="nx">av</span> <span class="nx">data</span> <span class="nx">dir</span> <span class="p">:</span> <span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">anaconda3</span><span class="o">/</span><span class="nx">etc</span><span class="o">/</span><span class="nx">conda</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">conda</span> <span class="nx">av</span> <span class="nx">metadata</span> <span class="nx">url</span> <span class="p">:</span> <span class="nx">None</span>
+</span></span><span class="line"><span class="cl">           <span class="nx">channel</span> <span class="nx">URLs</span> <span class="p">:</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/cloud/conda-forge/linux-64</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/cloud/conda-forge/noarch</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/pkgs/main/linux-64</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/pkgs/main/noarch</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/pkgs/r/linux-64</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/pkgs/r/noarch</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/pkgs/msys2/linux-64</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//mirror.lzu.edu.cn/anaconda/pkgs/msys2/noarch</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//repo.anaconda.com/pkgs/main/linux-64</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//repo.anaconda.com/pkgs/main/noarch</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//repo.anaconda.com/pkgs/r/linux-64</span>
+</span></span><span class="line"><span class="cl">                          <span class="nx">https</span><span class="p">:</span><span class="c1">//repo.anaconda.com/pkgs/r/noarch</span>
+</span></span><span class="line"><span class="cl">          <span class="kn">package</span> <span class="nx">cache</span> <span class="p">:</span> <span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">zzh</span><span class="o">/</span><span class="p">.</span><span class="nx">conda</span><span class="o">/</span><span class="nx">pkgs</span>
+</span></span><span class="line"><span class="cl">                          <span class="o">/</span><span class="nx">srv</span><span class="o">/</span><span class="nx">conda_pkgs</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">envs</span> <span class="nx">directories</span> <span class="p">:</span> <span class="o">/</span><span class="nx">opt</span><span class="o">/</span><span class="nx">anaconda3</span><span class="o">/</span><span class="nx">envs</span>
+</span></span><span class="line"><span class="cl">                          <span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">zzh</span><span class="o">/</span><span class="p">.</span><span class="nx">conda</span><span class="o">/</span><span class="nx">envs</span>
+</span></span><span class="line"><span class="cl">               <span class="nx">platform</span> <span class="p">:</span> <span class="nx">linux</span><span class="o">-</span><span class="mi">64</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">user</span><span class="o">-</span><span class="nx">agent</span> <span class="p">:</span> <span class="nx">conda</span><span class="o">/</span><span class="mf">24.11.3</span> <span class="nx">requests</span><span class="o">/</span><span class="mf">2.32.3</span> <span class="nx">CPython</span><span class="o">/</span><span class="mf">3.12.2</span> <span class="nx">Linux</span><span class="o">/</span><span class="mf">5.15.0</span><span class="o">-</span><span class="mi">140</span><span class="o">-</span><span class="nx">generic</span> <span class="nx">ubuntu</span><span class="o">/</span><span class="mf">22.04.5</span> <span class="nx">glibc</span><span class="o">/</span><span class="mf">2.35</span> <span class="nx">solver</span><span class="o">/</span><span class="nx">libmamba</span> <span class="nx">conda</span><span class="o">-</span><span class="nx">libmamba</span><span class="o">-</span><span class="nx">solver</span><span class="o">/</span><span class="mf">24.9.0</span> <span class="nx">libmambapy</span><span class="o">/</span><span class="mf">1.5.8</span> <span class="nx">aau</span><span class="o">/</span><span class="mf">0.4.4</span> <span class="nx">c</span><span class="o">/</span><span class="mi">6</span><span class="nx">RGbBPBNDWQHXq6gOb3zcQ</span> <span class="nx">s</span><span class="o">/</span><span class="nx">YZsa4iE5lOo0aS0DZhjuYA</span> <span class="nx">e</span><span class="o">/</span><span class="nx">Pbj6KNwzj9T_jvUfEWtz1g</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">UID</span><span class="p">:</span><span class="nx">GID</span> <span class="p">:</span> <span class="mi">1003</span><span class="p">:</span><span class="mi">1003</span>
+</span></span><span class="line"><span class="cl">             <span class="nx">netrc</span> <span class="nx">file</span> <span class="p">:</span> <span class="nx">None</span>
+</span></span><span class="line"><span class="cl">           <span class="nx">offline</span> <span class="nx">mode</span> <span class="p">:</span> <span class="nx">False</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>即可添加成功，这只是其中一种方法，你还可以直接修改conda的配置文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vim ~/.condarc</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2025-06-04 16:04:05">Updated on 2025-06-04&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/a8661a0/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://littleju1y.github.io/posts/a8661a0/" data-title="Conda配置修改" data-hashtags="draft"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://littleju1y.github.io/posts/a8661a0/" data-hashtag="draft"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://littleju1y.github.io/posts/a8661a0/" data-title="Conda配置修改"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/draft/" class="post-tag" title="Tags - Draft">Draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/python%E5%BC%80%E5%8F%91/django5%E6%A1%86%E6%9E%B6/" class="post-nav-item" rel="prev" title="Django5框架"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Django5框架</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.147.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.21-a85a6655"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">July</a></span><span class="license footer-divider"><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.21-a85a6655"};</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script></body>
+</html>

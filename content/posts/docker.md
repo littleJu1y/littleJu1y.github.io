@@ -473,5 +473,101 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 ### 运行一个web应用
 ```shell
-docker pull 
+docker pull nginx   #首先我们先拉取一个web应用程序的docker
+
+docker run -d -P nginx  #这里的-d是后台运行，-P是随机映射端口
+
+docker ps  # 查看目前运行的容器发现多了PORTS端口映射，容器内部的端口80被映射到了主机端口32768
+root@VM-0-11-ubuntu:/home/july# docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+013079f723c7   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   0.0.0.0:32768->80/tcp, [::]:32768->80/tcp   objective_lehmann
 ```
+
+接下来我们访问我们的服务，首先查看我们的ip
+
+```shell
+root@VM-0-11-ubuntu:/home/july# ifconfig
+docker0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::b8f0:c8ff:fe86:d90f  prefixlen 64  scopeid 0x20<link>
+        ether ba:f0:c8:86:d9:0f  txqueuelen 0  (Ethernet)
+        RX packets 15  bytes 420 (420.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 13  bytes 1406 (1.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.6.0.11  netmask 255.255.252.0  broadcast 10.6.3.255
+        inet6 fe80::5054:ff:fe2b:8c8c  prefixlen 64  scopeid 0x20<link>
+        ether 52:54:00:2b:8c:8c  txqueuelen 1000  (Ethernet)
+        RX packets 12766456  bytes 3826312221 (3.8 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 10184128  bytes 1694251573 (1.6 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1370567  bytes 139595582 (139.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1370567  bytes 139595582 (139.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethf9885d8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::b4bf:6fff:fe07:899b  prefixlen 64  scopeid 0x20<link>
+        ether 76:bf:03:bd:66:18  txqueuelen 0  (Ethernet)
+        RX packets 3  bytes 126 (126.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 14  bytes 1156 (1.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+# 你会发现一个神奇的现象，这里面并没有我们的公网ip，这是为什么呢？其实这里是存在一个误解，ifconfig查看的是服务器内部的网路接口信息，而不是公网ip地址。公网ip不会直接显示在ifconfig的输出中，因为公网 IP 通常是通过 NAT（网络地址转换）映射到内网 IP 的,若想查看公网ip，你需要输入`curl ifconfig.me`
+
+
+root@VM-0-11-ubuntu:/home/july# curl ifconfig.me
+118.25.230.175root@VM-0-11-ubuntu:/home/july# 
+
+# 这种网络架构是正常的，特别是在云服务器环境中：
+# 服务器内部使用内网 IP（10.6.0.11）进行内部通信
+# 外部访问通过公网 IP（118.25.230.175）进行
+# 云服务提供商的网络设备负责在这两个地址之间进行转换
+```
+
+此时我们尝试访问`http://118.25.230.175:32768/`，无法访问，这是因为在云服务器环境中有安全组的配置，所以无法访问是正常的。
+
+```shell
+#docker logs xxx 查看容器内部的输出
+
+root@VM-0-11-ubuntu:/home/july# docker logs 0130
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2025/06/05 07:48:57 [notice] 1#1: using the "epoll" event method
+2025/06/05 07:48:57 [notice] 1#1: nginx/1.27.5
+2025/06/05 07:48:57 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/06/05 07:48:57 [notice] 1#1: OS: Linux 6.8.0-51-generic
+2025/06/05 07:48:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/06/05 07:48:57 [notice] 1#1: start worker processes
+2025/06/05 07:48:57 [notice] 1#1: start worker process 29
+2025/06/05 07:48:57 [notice] 1#1: start worker process 30
+172.17.0.1 - - [05/Jun/2025:08:09:30 +0000] "GET / HTTP/1.1" 200 615 "-" "curl/8.5.0" "-"
+```
+
+
+使用`docker top xxx`查看容器内部运行的进程
+
+```shell
+root@VM-0-11-ubuntu:/home/july# docker top 0130
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                2718760             2718735             0                   15:48               ?                   00:00:00            nginx: master process nginx -g daemon off;
+message+            2718825             2718760             0                   15:48               ?                   00:00:00            nginx: worker process
+message+            2718826             2718760             0                   15:48               ?                   00:00:00            nginx: worker process
+```
+
