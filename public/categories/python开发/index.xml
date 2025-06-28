@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python开发 - Category - July Blog</title>
-    <link>https://littleju1y.github.io/categories/python%E5%BC%80%E5%8F%91/</link>
-    <description>July Blog</description>
-    <generator>Hugo 0.147.2 &amp; FixIt v0.3.21-a85a6655</generator>
-    <language>en</language>
-    <managingEditor>762909561@qq.com (July)</managingEditor>
-    <webMaster>762909561@qq.com (July)</webMaster>
-    <lastBuildDate>Wed, 19 Mar 2025 13:04:15 +0800</lastBuildDate>
-    <atom:link href="https://littleju1y.github.io/categories/python%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello_world</title>
-      <link>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/hello_world/</link>
-      <pubDate>Wed, 19 Mar 2025 12:53:48 +0800</pubDate><author>762909561@qq.com (July)</author>
-      <guid>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/hello_world/</guid>
-      <category domain="https://littleju1y.github.io/categories/python%E5%BC%80%E5%8F%91/">Python开发</category>
-      <description>&lt;p&gt;test&#xA;tets&#39;&#xA;test&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python开发 - Category - July Blog</title><link>https://littleju1y.github.io/categories/python%E5%BC%80%E5%8F%91/</link><description>July Blog</description><generator>Hugo 0.147.2 &amp; FixIt v0.3.21-a85a6655</generator><language>en</language><managingEditor>762909561@qq.com (July)</managingEditor><webMaster>762909561@qq.com (July)</webMaster><lastBuildDate>Wed, 19 Mar 2025 13:04:15 +0800</lastBuildDate><atom:link href="https://littleju1y.github.io/categories/python%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello_world</title><link>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/hello_world/</link><pubDate>Wed, 19 Mar 2025 12:53:48 +0800</pubDate><author>762909561@qq.com (July)</author><guid>https://littleju1y.github.io/python%E5%BC%80%E5%8F%91/hello_world/</guid><category domain="https://littleju1y.github.io/categories/python%E5%BC%80%E5%8F%91/">Python开发</category><description>&lt;p>test
+tets'
+test&lt;/p></description></item></channel></rss>
